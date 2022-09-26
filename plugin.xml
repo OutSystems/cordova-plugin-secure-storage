@@ -28,23 +28,29 @@
     </engines>
 
     <platform name="ios">
+         <dependency id="cordova-plugin-add-swift-support" url="https://github.com/OutSystems/cordova-plugin-add-swift-support.git#2.0.3-OS1"/>
+
         <config-file target="config.xml" parent="/*">
             <feature name="SecureStorage">
                 <param name="ios-package" value="SecureStorage"/>
+                <preference name="deployment-target" value="13" />
+                <preference name="UseSwiftLanguageVersion" value="5" />
             </feature>
         </config-file>
-        <source-file src="src/ios/SecureStorage.m" />
-        <header-file src="src/ios/SecureStorage.h" />
+        
+        <source-file src="src/ios/Error/OSKSTError.swift" />
 
-        <source-file src="src/ios/SAMKeychain/SAMKeychain.m" />
-        <header-file src="src/ios/SAMKeychain/SAMKeychain.h" />
-        <source-file src="src/ios/SAMKeychain/SAMKeychainQuery.m" />
-        <header-file src="src/ios/SAMKeychain/SAMKeychainQuery.h" />
+        <source-file src="src/ios/Extensions/CFArray+Conversion.swift" />
+        <source-file src="src/ios/Extensions/OSStatus+Conversion.swift" />
 
-        <resource-file src="src/ios/SAMKeychain/SAMKeychain.bundle" />
+        <source-file src="src/ios/OSKSTQuery.swift" />
+        <source-file src="src/ios/OSKSTWrapper.swift" />
 
-        <framework src="Security.framework" />
+        <source-file src="src/ios/Protocols/OSKSTActionDelegate.swift" />
+        <source-file src="src/ios/Protocols/OSKSTCallbackDelegate.swift" />
 
+        <source-file src="src/ios/SecureStorage.swift"/>
+        <framework src="src/ios/frameworks/OSCore.xcframework" embed="true" custom="true" />
     </platform>
 
     <platform name="android">

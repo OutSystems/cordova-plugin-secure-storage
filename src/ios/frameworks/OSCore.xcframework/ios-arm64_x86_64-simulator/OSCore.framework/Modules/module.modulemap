@@ -1,0 +1,11 @@
+framework module OSCore {
+  umbrella header "OSCore.h"
+
+  export *
+  module * { export * }
+}
+
+module OSCore.Swift {
+    header "OSCore-Swift.h"
+    requires objc
+}

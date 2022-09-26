@@ -1,6 +1,13 @@
 Changelog
 =========
 
+[Unreleased] - 2022-09-29
+------------------
+
+- iOS | Feat: Set Key Value pair (https://outsystemsrd.atlassian.net/browse/RMET-1872).
+- iOS | Feat: Get Key Value pair. It works with both `Store` and `Key` parameters passed or just the first one (https://outsystemsrd.atlassian.net/browse/RMET-1873).
+- iOS | Feat: Delete Key Value pair. It works with both `Store` and `Key` parameters passed or just the first one (https://outsystemsrd.atlassian.net/browse/RMET-1874).
+
 2.6.8-OS12 - 2022-04-14
 ------------------
 

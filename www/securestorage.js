@@ -98,10 +98,10 @@ SecureStorageiOS.prototype = {
         }
     },
 
-    set: function (success, error, key, value) {
+    set: function (success, error, key, value, useAuthentication = false) {
         try {
             _checkIsString(value);
-            _executeNativeMethod(success, error, 'set', [this.service, key, value]);
+            _executeNativeMethod(success, error, 'set', [this.service, key, value, useAuthentication]);
         } catch (e) {
             error(e);
         }
