@@ -2,23 +2,23 @@ import OSCore
 
 @objc(SecureStorage)
 class SecureStorage: CDVPlugin {
-    var plugin: OSKSTWrapper?
+    var plugin: OSKSTActionDelegate?
     var callbackId: String = ""
     
     private var savedCommand: CDVInvokedUrlCommand?
     
     override func pluginInitialize() {
-        self.plugin = OSKSTWrapper(delegate: self)
+        self.plugin = OSKSTFactory.createKeystoreWrapper(withDelegate: self)
     }
     
     @objc func dataBecameAvailable(notification: Notification) {
         // Re-triggers the `init` method as before, using the stored command
         guard let command = self.savedCommand else { return }
-        self.`init`(command: command)
+        self.setup(command: command)
     }
     
     @objc(init:)
-    func `init`(command: CDVInvokedUrlCommand) {
+    func setup(command: CDVInvokedUrlCommand) {
         if #available(iOS 15, *) {
             // if Protected Data Acess is not yet available, the app observes the `dataBecomeAvailableNotification:`, so that the method resumes when the notification is triggered
             if !UIApplication.shared.isProtectedDataAvailable {

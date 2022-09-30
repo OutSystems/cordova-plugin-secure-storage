@@ -1,4 +1,5 @@
 extension OSStatus {
+    /// Converts an `OSStatus` error into an `OSKSTError` that is managed by the library.
     var queryError: OSKSTError? {
         switch self {
         case errSecSuccess:

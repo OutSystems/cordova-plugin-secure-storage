@@ -1,3 +1,4 @@
+/// All plugin errors that can be thrown
 public enum OSKSTError: Int, CustomNSError, LocalizedError {
     case badArguments = 1
     case operationUnimplemented = 2
@@ -11,6 +12,7 @@ public enum OSKSTError: Int, CustomNSError, LocalizedError {
     case authenticationFailed = 10
     case general = 11
     
+    /// Textual description
     public var errorDescription: String? {
         switch self {
         case .badArguments:

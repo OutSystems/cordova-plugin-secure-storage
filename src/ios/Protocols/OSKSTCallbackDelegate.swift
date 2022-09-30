@@ -1,3 +1,4 @@
+/// Delegate for the callback return calls for the plugin
 public protocol OSKSTCallbackDelegate: AnyObject {
     func callback(result: String?, error: OSKSTError?)
 }

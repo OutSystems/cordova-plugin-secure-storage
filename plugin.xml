@@ -38,6 +38,8 @@
             </feature>
         </config-file>
         
+        <source-file src="src/ios/Factory/OSKSTFactory.swift" />
+
         <source-file src="src/ios/Error/OSKSTError.swift" />
 
         <source-file src="src/ios/Extensions/CFArray+Conversion.swift" />
