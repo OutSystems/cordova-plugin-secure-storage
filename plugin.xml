@@ -52,7 +52,15 @@
         <source-file src="src/ios/Protocols/OSKSTCallbackDelegate.swift" />
 
         <source-file src="src/ios/SecureStorage.swift"/>
-        <framework src="src/ios/frameworks/OSCore.xcframework" embed="true" custom="true" />
+
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="OSCommonPluginLib" spec="1.0.0" />
+            </pods>
+        </podspec>
     </platform>
 
     <platform name="android">

@@ -1,4 +1,4 @@
-import OSCore
+import OSCommonPluginLib
 
 @objc(SecureStorage)
 class SecureStorage: CDVPlugin {
