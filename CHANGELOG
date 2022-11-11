@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ------------------
 
+- Fix: [Android] Replace dynamic gradle versions by fixed versions. (https://outsystemsrd.atlassian.net/browse/RMET-2045)
+
 2.6.8-OS14 - 2022-11-09
 ------------------
 
