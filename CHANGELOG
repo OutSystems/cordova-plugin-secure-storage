@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ------------------
 
+### 16-12-2022
+- Removed dependency to  jcenter() [RMET-2036](https://outsystemsrd.atlassian.net/browse/RMET-2036)
+
 - Fix: [Android] Replace dynamic gradle versions by fixed versions. (https://outsystemsrd.atlassian.net/browse/RMET-2045)
 
 2.6.8-OS15 - 2022-11-23
