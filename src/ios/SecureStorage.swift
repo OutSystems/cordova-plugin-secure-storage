@@ -132,7 +132,7 @@ extension SecureStorage: PlatformProtocol {
             ]
             pluginResult = CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: errorDict);
         } else if let result = result {
-            pluginResult = result.isEmpty ? CDVPluginResult(status: CDVCommandStatus_OK) : CDVPluginResult(status: CDVCommandStatus_OK, messageAs: result)
+            pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: result)
         }
 
         self.commandDelegate.send(pluginResult, callbackId: callBackID);
