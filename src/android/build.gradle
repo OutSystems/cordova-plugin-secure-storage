@@ -17,11 +17,6 @@ repositories {
     }
 }
 
-repositories{
-    jcenter()
-}
-
-
 apply plugin: 'kotlin-kapt'
 
 dependencies {
