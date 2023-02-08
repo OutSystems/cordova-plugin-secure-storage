@@ -1,0 +1,50 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OSKeyStoreLib
+import Foundation
+import Swift
+import _Concurrency
+public protocol OSKSTCallbackDelegate : AnyObject {
+  func callback(result: Swift.String?, error: OSKeyStoreLib.OSKSTError?)
+}
+extension OSKeyStoreLib.OSKSTCallbackDelegate {
+  public func callback(error: OSKeyStoreLib.OSKSTError)
+  public func callback(text: Swift.String)
+  public func callbackSuccess()
+}
+public struct OSKSTFactory {
+  public static func createKeystoreWrapper(withDelegate delegate: OSKeyStoreLib.OSKSTCallbackDelegate) -> OSKeyStoreLib.OSKSTActionDelegate
+}
+public protocol OSKSTActionDelegate : AnyObject {
+  func save(service: Swift.String, account: Swift.String, data: Foundation.Data, useAccessControl: Swift.Bool)
+  func read(service: Swift.String, account: Swift.String?)
+  func delete(service: Swift.String, account: Swift.String?)
+}
+extension OSKeyStoreLib.OSKSTActionDelegate {
+  public func read(service: Swift.String)
+  public func delete(service: Swift.String)
+}
+public enum OSKSTError : Swift.Int, Foundation.CustomNSError, Foundation.LocalizedError {
+  case badArguments
+  case operationUnimplemented
+  case invalidParameters
+  case memoryAllocation
+  case unavailable
+  case duplicateItem
+  case itemNotFound
+  case userInterationNotAllowed
+  case dataDecode
+  case authenticationFailed
+  case general
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension OSKeyStoreLib.OSKSTError : Swift.Equatable {}
+extension OSKeyStoreLib.OSKSTError : Swift.Hashable {}
+extension OSKeyStoreLib.OSKSTError : Swift.RawRepresentable {}

@@ -1,0 +1,4 @@
+framework module OSKeyStoreLib {
+  header "OSKeyStoreLib-Swift.h"
+  requires objc
+}

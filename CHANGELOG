@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ------------------
 
+- Feat: [iOS] Make library available as `xcframework` (https://outsystemsrd.atlassian.net/browse/RMET-2280).
+
 2.6.8-OS17 - 2023-01-20
 ------------------
 
