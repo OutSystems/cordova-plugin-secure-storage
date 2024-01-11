@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ------------------
 
+2.6.8-OS18 - 2024-01-11
+------------------
+
+- Fix: [Android] Update OSKeystoreLib version to fix incompatibility issue with AppFeedback (https://outsystemsrd.atlassian.net/browse/RMET-2994).
+
 - Feat: [iOS] Make library available as `xcframework` (https://outsystemsrd.atlassian.net/browse/RMET-2280).
 
 2.6.8-OS17 - 2023-01-20
