@@ -31,6 +31,7 @@ import android.util.Pair;
 
 import com.outsystems.plugins.keystore.controller.KeystoreController;
 import com.outsystems.plugins.keystore.controller.KeystoreError;
+import com.outsystems.plugins.keystore.controller.OSKSTRBiometricPromptInfo;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
@@ -75,8 +76,13 @@ public class SecureStorage extends CordovaPlugin {
 
         intentRequestQueue = new IntentRequestQueue(this);
 
-        keystoreController = new KeystoreController();
-
+        keystoreController = new KeystoreController(
+                new OSKSTRBiometricPromptInfo(
+                        getStringResource(this.cordova.getActivity(), "biometric_prompt_title"),
+                        getStringResource(this.cordova.getActivity(), "biometric_prompt_subtitle"),
+                        getStringResource(this.cordova.getActivity(), "biometric_prompt_negative_button")
+                )
+        );
     }
 
 
@@ -946,6 +952,14 @@ public class SecureStorage extends CordovaPlugin {
 
     private int getBooleanResourceId(Activity activity, String name) {
         return activity.getResources().getIdentifier(name, "bool", activity.getPackageName());
+    }
+
+    private int getStringResourceId(Activity activity, String name) {
+        return activity.getResources().getIdentifier(name, "string", activity.getPackageName());
+    }
+
+    private String getStringResource(Activity activity, String name) {
+        return activity.getString(getStringResourceId(activity, name));
     }
    
 }
