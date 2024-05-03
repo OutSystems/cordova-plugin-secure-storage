@@ -8,6 +8,7 @@ module.exports = function (context) {
     const projectRoot = context.opts.cordova.project ? context.opts.cordova.project.root : context.opts.projectRoot;
     const configXML = path.join(projectRoot, 'config.xml');
     const configParser = new ConfigParser(configXML);
+    const parser = new DOMParser();
 
     const authenticate = configParser.getGlobalPreference('MigratedKeysAuthentication');
     const auth_prompt_title = configParser.getPreference('AuthPromptTitle', 'android')
