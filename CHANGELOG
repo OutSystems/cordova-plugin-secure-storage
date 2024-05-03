@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ------------------
 
+2.6.8-OS19 - 2024-05-03
+------------------
+
+- Feat: [Android] Add parameters for title, subtitle, and negative button text of Biometric Prompt (https://outsystemsrd.atlassian.net/browse/RMET-3408).
+
 2.6.8-OS18 - 2024-01-11
 ------------------
 

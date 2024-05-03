@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-secure-storage"
-    version="2.6.8-OS18">
+    version="2.6.8-OS19">
 
     <name>SecureStorage</name>
     <author>Crypho AS</author>
@@ -66,6 +66,9 @@
 
         <config-file parent="/resources" target="res/values/strings.xml">
             <bool name="migration_auth">false</bool>
+            <string name="biometric_prompt_title">Authentication required</string>
+            <string name="biometric_prompt_subtitle">Please authenticate to continue</string>
+            <string name="biometric_prompt_negative_button">Cancel</string>
         </config-file>
 
         <source-file src="src/android/AES.java" target-dir="src/com/crypho/plugins/" />
