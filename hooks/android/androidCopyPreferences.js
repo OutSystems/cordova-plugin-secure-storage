@@ -52,14 +52,14 @@ module.exports = function (context) {
     // set text for each <string> element
     for (let i = 0; i < stringElements.length; i++) {
         const name = stringElements[i].getAttribute('name');
-        if (name == "biometric_prompt_title") {
-            stringElements[i].textContent = authenticate;
+        if (name == "biometric_prompt_title" && auth_prompt_title != "") {
+            stringElements[i].textContent = auth_prompt_title;
         }
-        else if (name == "biometric_prompt_subtitle") {
-            stringElements[i].textContent = notificationDescription;
+        else if (name == "biometric_prompt_subtitle" && auth_prompt_subtitle != "") {
+            stringElements[i].textContent = auth_prompt_subtitle;
         }
-        else if (name == "biometric_prompt_negative_button") {
-            stringElements[i].textContent = notificationDescription;
+        else if (name == "biometric_prompt_negative_button" && auth_prompt_negative_button) {
+            stringElements[i].textContent = auth_prompt_negative_button;
         }
     }
 
