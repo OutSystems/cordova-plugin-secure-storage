@@ -66,6 +66,9 @@
 
         <config-file parent="/resources" target="res/values/strings.xml">
             <bool name="migration_auth">false</bool>
+            <string name="biometric_prompt_title">Authentication required</string>
+            <string name="biometric_prompt_subtitle">Please authenticate to continue</string>
+            <string name="biometric_prompt_negative_button">Cancel</string>
         </config-file>
 
         <source-file src="src/android/AES.java" target-dir="src/com/crypho/plugins/" />
