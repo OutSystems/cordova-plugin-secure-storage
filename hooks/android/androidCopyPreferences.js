@@ -12,8 +12,8 @@ module.exports = function (context) {
 
     const authenticate = configParser.getGlobalPreference('MigratedKeysAuthentication');
     const auth_prompt_title = configParser.getPreference('AuthPromptTitle', 'android')
-    const auth_prompt_subtitle = configParser.getPreference('AuthPromptSubtitle')
-    const auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton')
+    const auth_prompt_subtitle = configParser.getPreference('AuthPromptSubtitle', 'android')
+    const auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton', 'android')
 
     const stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/strings.xml');
     const stringsXmlString = fs.readFileSync(stringsXmlPath, 'utf-8');
