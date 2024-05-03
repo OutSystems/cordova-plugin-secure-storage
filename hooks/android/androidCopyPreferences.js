@@ -43,7 +43,7 @@ module.exports = function (context) {
         else if (name == "biometric_prompt_subtitle" && auth_prompt_subtitle != "") {
             stringElements[i].textContent = auth_prompt_subtitle;
         }
-        else if (name == "biometric_prompt_negative_button" && auth_prompt_negative_button) {
+        else if (name == "biometric_prompt_negative_button" && auth_prompt_negative_button != "") {
             stringElements[i].textContent = auth_prompt_negative_button;
         }
     }
