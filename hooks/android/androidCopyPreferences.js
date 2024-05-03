@@ -5,13 +5,14 @@ const { ConfigParser } = require('cordova-common');
 const { DOMParser, XMLSerializer } = require('xmldom');
 
 module.exports = function (context) {
-    let projectRoot = context.opts.cordova.project ? context.opts.cordova.project.root : context.opts.projectRoot;
-    let configXML = path.join(projectRoot, 'config.xml');
-    let configParser = new ConfigParser(configXML);
-    let authenticate = configParser.getGlobalPreference('MigratedKeysAuthentication');
-    let auth_prompt_title = configParser.getPreference('AuthPromptTitle', 'android')
-    let auth_prompt_subtitle = configParser.getPreference('AuthPromptSubtitle')
-    let auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton')
+    const projectRoot = context.opts.cordova.project ? context.opts.cordova.project.root : context.opts.projectRoot;
+    const configXML = path.join(projectRoot, 'config.xml');
+    const configParser = new ConfigParser(configXML);
+
+    const authenticate = configParser.getGlobalPreference('MigratedKeysAuthentication');
+    const auth_prompt_title = configParser.getPreference('AuthPromptTitle', 'android')
+    const auth_prompt_subtitle = configParser.getPreference('AuthPromptSubtitle')
+    const auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton')
 
     const stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/strings.xml');
     const stringsXmlString = fs.readFileSync(stringsXmlPath, 'utf-8');
@@ -32,9 +33,8 @@ module.exports = function (context) {
         fs.writeFileSync(stringsXmlPath, resultXmlStrings);
         */
 
-        // insert values in strings.xml
+        // insert bool value in strings.xml
         
-
         const booleanElements = stringsXmlDoc.getElementsByTagName('bool');
         
         // set text for each <bool> element
@@ -47,6 +47,7 @@ module.exports = function (context) {
 
     }
 
+    // insert string values in strings.xml
     const stringElements = stringsXmlDoc.getElementsByTagName('string');
 
     // set text for each <string> element
