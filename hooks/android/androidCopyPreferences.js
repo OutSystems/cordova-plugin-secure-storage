@@ -1,4 +1,3 @@
-const et = require('elementtree');
 const path = require('path');
 const fs = require('fs');
 const { ConfigParser } = require('cordova-common');
@@ -20,24 +19,9 @@ module.exports = function (context) {
     const stringsXmlDoc = parser.parseFromString(stringsXmlString, 'text/xml')
 
     if(authenticate == "true"){
-        /*
-        var stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/strings.xml');
-        var stringsXmlContents = fs.readFileSync(stringsXmlPath).toString();
-        var etreeStrings = et.parse(stringsXmlContents);
-
-        var migrationAuthTags = etreeStrings.findall('./bool[@name="migration_auth"]');
-        for (var i = 0; i < migrationAuthTags.length; i++) {
-            migrationAuthTags[i].text = authenticate;
-        }
-
-        var resultXmlStrings = etreeStrings.write();
-        fs.writeFileSync(stringsXmlPath, resultXmlStrings);
-        */
-
         // insert bool value in strings.xml
-        
         const booleanElements = stringsXmlDoc.getElementsByTagName('bool');
-        
+
         // set text for each <bool> element
         for (let i = 0; i < booleanElements.length; i++) {
             const name = booleanElements[i].getAttribute('name');
@@ -45,7 +29,6 @@ module.exports = function (context) {
                 booleanElements[i].textContent = authenticate;
             }
         }
-
     }
 
     // insert string values in strings.xml
@@ -71,6 +54,5 @@ module.exports = function (context) {
 
     // write the updated XML string back to the same file
     fs.writeFileSync(stringsXmlPath, updatedXmlString, 'utf-8');
-
 
 };
