@@ -8,10 +8,10 @@ module.exports = function (context) {
     let projectRoot = context.opts.cordova.project ? context.opts.cordova.project.root : context.opts.projectRoot;
     let configXML = path.join(projectRoot, 'config.xml');
     let configParser = new ConfigParser(configXML);
-    let authenticate = configParser.getGlobalPreference("MigratedKeysAuthentication");
-    let auth_prompt_title = configParser.getPreference("AuthPromptTitle")
-    let auth_prompt_subtitle = configParser.getPreference("AuthPromptSubtitle")
-    let auth_prompt_negative_button = configParser.getPreference("AuthPromptCancelButton")
+    let authenticate = configParser.getGlobalPreference('MigratedKeysAuthentication');
+    let auth_prompt_title = configParser.getPreference('AuthPromptTitle', 'android')
+    let auth_prompt_subtitle = configParser.getPreference('AuthPromptSubtitle')
+    let auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton')
 
     const stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/strings.xml');
     const stringsXmlString = fs.readFileSync(stringsXmlPath, 'utf-8');
