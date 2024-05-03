@@ -50,5 +50,8 @@
   "bugs": {
     "url": "https://github.com/crypho/cordova-plugin-secure-storage/issues"
   },
-  "homepage": "https://github.com/crypho/cordova-plugin-secure-storage#readme"
+  "homepage": "https://github.com/crypho/cordova-plugin-secure-storage#readme",
+  "dependencies": {
+    "xmldom": "^0.6.0"
+  }
 }
