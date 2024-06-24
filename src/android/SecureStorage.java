@@ -228,13 +228,16 @@ public class SecureStorage extends CordovaPlugin {
 
         if(checkForSecurityMigration()){
 
+            /*
             try {
                 securityMigration(callbackContext);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+             */
         }
 
+        /*
         if(isMigrationToEncryptedNeeded()){
             Boolean migrationSuccessful = doDataMigration(callbackContext);
             if(migrationSuccessful){
@@ -244,6 +247,8 @@ public class SecureStorage extends CordovaPlugin {
         else{
             callbackContext.success(1);
         }
+         */
+        callbackContext.success(1);
 
         return true;
     }
