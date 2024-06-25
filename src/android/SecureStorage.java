@@ -226,28 +226,18 @@ public class SecureStorage extends CordovaPlugin {
         SharedPreferencesHandler PREFS = new SharedPreferencesHandler(alias + "_SS", getContext());
         putStorage(service, PREFS);
 
-        if(checkForSecurityMigration()){
+        Context ctx = getContext();
+        SharedPreferences preferences = ctx.getSharedPreferences(ctx.getPackageName() + "_SM",0);
+        String isMigrated = preferences.getString(MIGRATED_FOR_SECURITY, "");
 
-            /*
-            try {
-                securityMigration(callbackContext);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-             */
+        if (!isMigrated.equals("TRUE")) {
+            markAsMigrated(preferences);
         }
 
-        /*
-        if(isMigrationToEncryptedNeeded()){
-            Boolean migrationSuccessful = doDataMigration(callbackContext);
-            if(migrationSuccessful){
-                callbackContext.success(1);
-            }
+        if (isMigrationToEncryptedNeeded()) {
+            markAsMigratedToEncrypted();
         }
-        else{
-            callbackContext.success(1);
-        }
-         */
+
         callbackContext.success(1);
 
         return true;
