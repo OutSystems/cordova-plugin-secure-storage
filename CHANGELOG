@@ -1,8 +1,10 @@
 Changelog
 =========
 
-Unreleased
+2.6.8-OS20 - 2024-09-11
 ------------------
+- Feat: [Android] Update Error Codes (https://outsystemsrd.atlassian.net/browse/RMET-3607).
+
 
 2.6.8-OS19 - 2024-05-03
 ------------------
