@@ -28,14 +28,11 @@
     </engines>
 
     <platform name="ios">
-         <dependency id="cordova-plugin-add-swift-support" url="https://github.com/OutSystems/cordova-plugin-add-swift-support.git#2.0.3-OS1"/>
-
         <config-file target="config.xml" parent="/*">
             <feature name="SecureStorage">
                 <param name="ios-package" value="SecureStorage"/>
-                <preference name="deployment-target" value="13" />
-                <preference name="UseSwiftLanguageVersion" value="5" />
             </feature>
+            <preference name="SwiftVersion" value="5" />
         </config-file>
         
         <source-file src="src/ios/SecureStorage.swift"/>
