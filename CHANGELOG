@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS21 - 2025-02-07
+------------------
+- Chore: [iOS] Replace `cordova-plugin-add-swift-support` plugin with the `SwiftVersion` preference (https://outsystemsrd.atlassian.net/browse/RMET-4037).
+
 2.6.8-OS20 - 2024-09-11
 ------------------
 - Feat: [Android] Update Error Codes (https://outsystemsrd.atlassian.net/browse/RMET-3607).
