@@ -4,7 +4,7 @@ This folder contains .yaml files for configuring build actions to use in a plugi
 
 ## Contents
 
-The file setStringsAndroid.yaml contains one build actions:
+The file setStringsAndroid.yaml contains one build action:
 
 - Android specific. Adds multple `<string>` entries to the `strings.xml` file of the Android app. These strings are then fetched in runtime and used in the plugin.
 
