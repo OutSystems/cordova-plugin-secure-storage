@@ -32,7 +32,7 @@ module.exports = function (context) {
     boolDuplicates.forEach(el => el.parentNode.removeChild(el));
 
     // Add new <bool> if needed
-    if (authenticate === "true") {
+    if (authenticate == "true") {
         const newBool = stringsXmlDoc.createElement('bool');
         newBool.setAttribute('name', boolKey);
         newBool.textContent = authenticate;
