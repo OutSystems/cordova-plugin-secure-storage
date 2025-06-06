@@ -1,0 +1,25 @@
+variables:
+  BIOMETRIC_PROMPT_TITLE:
+    type: string
+    default: "Authentication required"
+  BIOMETRIC_PROMPT_SUBTITLE:
+    type: string
+    default: "Please authenticate to continue"
+  BIOMETRIC_PROMPT_NEGATIVE_BTN:
+    type: string
+    default: "Cancel"
+  MIGRATE_KEYS_AUTH:
+    type: boolean
+    default: false
+platforms:
+  android:
+    xml:
+      - resFile: values/strings.xml
+        target: resources
+        merge: |
+          <resources>
+            <string name="biometric_prompt_title">$BIOMETRIC_PROMPT_TITLE</string>
+            <string name="biometric_prompt_subtitle">$BIOMETRIC_PROMPT_SUBTITLE</string>
+            <string name="biometric_prompt_negative_button">$BIOMETRIC_PROMPT_NEGATIVE_BTN</string>
+            <bool name="migration_auth">$MIGRATE_KEYS_AUTH</bool>
+          </resources>
