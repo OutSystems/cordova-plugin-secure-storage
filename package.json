@@ -40,7 +40,8 @@
     "url": "git+https://github.com/crypho/cordova-plugin-secure-storage.git"
   },
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint www/securestorage.js tests/tests.js"
+    "eslint": "./node_modules/.bin/eslint www/securestorage.js tests/tests.js",
+    "capacitor:update:after": "node build-actions/insert_azure_repository.js"
   },
   "devDependencies": {
     "cordova-plugin-test-framework": ">=1.0.0",
