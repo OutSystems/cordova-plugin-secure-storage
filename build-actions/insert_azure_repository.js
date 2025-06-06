@@ -2,15 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const platform = process.env.CAPACITOR_PLATFORM_NAME;
-console.log("\tKeyStore plugin - running hook after update - for " + platform);
+console.log("\tCamera plugin - running hook after update - for " + platform);
 const projectDirPath = process.env.CAPACITOR_ROOT_DIR;
 
 if (platform == 'android') {
     fixAndroidAzureRepository();
+    deleteDrawables(); // only for testing
 }
 
 /**
- * Add the azure repository (where KeyStore native Android library is housed) to project root's build.gradle
+ * Add the azure repository (where camera native Android library is housed) to project root's build.gradle
  * Because capacitor plugins are injected as separate gradle modules, this is necessary for release builds lintVital gradle tasks to pass.
  */
 function fixAndroidAzureRepository() {
@@ -61,4 +62,21 @@ function fixAndroidAzureRepository() {
         fs.writeFileSync(gradleFilePath, updatedContent, 'utf8');
         console.log('\t[SUCCESS] Added Azure repository maven block to the root build.gradle.');
     }
+}
+
+function deleteDrawables() {
+    const drawablesDirPath = path.resolve(projectDirPath, 'android/app/src/main/res');
+
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-land-hdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-land-ldpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-land-mdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-land-xhdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-land-xxhdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-land-xxxhdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-port-hdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-port-ldpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-port-mdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-port-xhdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-port-xxhdpi'), { recursive: true, force: true }, (err) => {});
+    fs.rm(path.resolve(drawablesDirPath, 'drawable-port-xxxhdpi'), { recursive: true, force: true }, (err) => {});
 }
