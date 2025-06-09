@@ -54,7 +54,7 @@ module.exports = function (context) {
     // process <string> entries
     const allStrings = Array.from(stringsXmlDoc.getElementsByTagName('string'));
 
-    for (const [key, value] of Object.entries(stringUpdates)) {
+    for (const [key, value] of Object.entries(stringKeys)) {
         if (!value || value.trim() === "") continue;
 
         const matchingStrings = allStrings.filter(el => el.getAttribute('name') === key);
