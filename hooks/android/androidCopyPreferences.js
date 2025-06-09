@@ -26,30 +26,52 @@ module.exports = function (context) {
         biometric_prompt_negative_button: auth_prompt_negative_button
     };
 
-    // === Remove duplicate <bool> entries ===
+    // process <bool> entry
     const boolElements = Array.from(stringsXmlDoc.getElementsByTagName('bool'));
-    const boolDuplicates = boolElements.filter(el => el.getAttribute('name') === boolKey);
-    boolDuplicates.forEach(el => el.parentNode.removeChild(el));
+    const boolMatches = boolElements.filter(el => el.getAttribute('name') === boolKey);
 
-    // Add new <bool> if needed
     if (authenticate == "true") {
-        const newBool = stringsXmlDoc.createElement('bool');
-        newBool.setAttribute('name', boolKey);
-        newBool.textContent = authenticate;
-        stringsXmlDoc.documentElement.appendChild(newBool);
+        if (boolMatches.length > 0) {
+            // remove any duplicates beyond the first
+            for (let i = 1; i < boolMatches.length; i++) {
+                boolMatches[i].parentNode.removeChild(boolMatches[i]);
+            }
+
+            // update first match if needed
+            const existingBool = boolMatches[0];
+            if (existingBool.textContent !== authenticate) {
+                existingBool.textContent = authenticate;
+            }
+        } else {
+            // add new <bool> if it doesn't exist
+            const newBool = stringsXmlDoc.createElement('bool');
+            newBool.setAttribute('name', boolKey);
+            newBool.textContent = authenticate;
+            stringsXmlDoc.documentElement.appendChild(newBool);
+        }
     }
 
-    // === Remove duplicate <string> entries ===
-    const existingStrings = Array.from(stringsXmlDoc.getElementsByTagName('string'));
+    // process <string> entries
+    const allStrings = Array.from(stringsXmlDoc.getElementsByTagName('string'));
 
-    for (const [key, value] of Object.entries(stringKeys)) {
-        // Remove existing <string> with this name
-        existingStrings
-            .filter(el => el.getAttribute('name') === key)
-            .forEach(el => el.parentNode.removeChild(el));
+    for (const [key, value] of Object.entries(stringUpdates)) {
+        if (!value || value.trim() === "") continue;
 
-        // Add new <string> if value is not empty
-        if (value && value.trim() !== "") {
+        const matchingStrings = allStrings.filter(el => el.getAttribute('name') === key);
+
+        if (matchingStrings.length > 0) {
+            // remove duplicates beyond the first
+            for (let i = 1; i < matchingStrings.length; i++) {
+                matchingStrings[i].parentNode.removeChild(matchingStrings[i]);
+            }
+
+            // update first if needed
+            const existingString = matchingStrings[0];
+            if (existingString.textContent !== value) {
+                existingString.textContent = value;
+            }
+        } else {
+            // add new <string> if it doesn't exist
             const newString = stringsXmlDoc.createElement('string');
             newString.setAttribute('name', key);
             newString.textContent = value;
