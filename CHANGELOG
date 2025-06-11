@@ -1,6 +1,10 @@
 Changelog
 =========
 
+Unreleased
+------------------
+- Fix: [android] Updates hook to avoid duplicates in `strings.xml` (https://outsystemsrd.atlassian.net/browse/RMET-4025).
+
 2.6.8-OS21 - 2025-02-07
 ------------------
 - Chore: [iOS] Replace `cordova-plugin-add-swift-support` plugin with the `SwiftVersion` preference (https://outsystemsrd.atlassian.net/browse/RMET-4037).
