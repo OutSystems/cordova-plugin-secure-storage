@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS23 - 2025-07-08
+------------------
+- Fix: [android] Updates hook to avoid duplicates in `strings.xml` (https://outsystemsrd.atlassian.net/browse/RMET-4025).
+
 2.6.8-OS22 - 2025-06-06
 ------------------
 - Fix: [Android] Capacitor Release builds failure.
