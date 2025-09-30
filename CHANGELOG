@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS24 - 2025-09-30
+------------------
+- Fix: [android] Update build action to add Kotlin Gradle Plugin to app's build.gradle file (https://outsystemsrd.atlassian.net/browse/RMET-4515)
+
 2.6.8-OS23 - 2025-07-08
 ------------------
 - Fix: [android] Updates hook to avoid duplicates in `strings.xml` (https://outsystemsrd.atlassian.net/browse/RMET-4025).
