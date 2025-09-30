@@ -23,3 +23,10 @@ platforms:
             <string name="biometric_prompt_negative_button">$BIOMETRIC_PROMPT_NEGATIVE_BTN</string>
             <bool name="migration_auth">$MIGRATE_KEYS_AUTH</bool>
           </resources>
+    gradle:
+    - file: build.gradle
+      target:
+        buildscript:
+          dependencies:
+      insert:
+        - classpath: "'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.25'"
