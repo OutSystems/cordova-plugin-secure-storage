@@ -17,8 +17,6 @@ repositories {
     }
 }
 
-apply plugin: 'kotlin-kapt'
-
 dependencies {
     implementation("com.github.outsystems:oscore-android:1.1.0@aar")
     implementation("com.github.outsystems:oscordova-android:1.1.0@aar")
