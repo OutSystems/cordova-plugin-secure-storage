@@ -15,7 +15,7 @@ module.exports = function (context) {
     const auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton', 'android')
 
         // create XML with correct values directly
-    var stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/os_sociallogins_strings.xml');
+    var stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/os_keystore_strings.xml');
 
     const xmlContent = `<?xml version='1.0' encoding='utf-8'?>
 <resources>
