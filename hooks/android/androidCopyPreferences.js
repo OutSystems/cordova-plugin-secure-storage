@@ -14,7 +14,20 @@ module.exports = function (context) {
     const auth_prompt_subtitle = configParser.getPreference('AuthPromptSubtitle', 'android')
     const auth_prompt_negative_button = configParser.getPreference('AuthPromptCancelButton', 'android')
 
-    const stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/strings.xml');
+        // create XML with correct values directly
+    var stringsXmlPath = path.join(projectRoot, 'platforms/android/app/src/main/res/values/os_sociallogins_strings.xml');
+
+    const xmlContent = `<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <bool name="migration_auth">false</bool>
+    <string name="biometric_prompt_title">Authentication required</string>
+    <string name="biometric_prompt_subtitle">Please authenticate to continue</string>
+    <string name="biometric_prompt_negative_button">Cancel</string>
+</resources>`;
+
+    // write XML file directly
+    fs.writeFileSync(stringsXmlPath, xmlContent);
+
     const stringsXmlString = fs.readFileSync(stringsXmlPath, 'utf-8');
     const stringsXmlDoc = parser.parseFromString(stringsXmlString, 'text/xml')
 
