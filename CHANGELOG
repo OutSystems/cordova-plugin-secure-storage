@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS25 - 2025-11-14
+------------------
+- Fix: [android] Fixes missing strings.xml on target project (https://outsystemsrd.atlassian.net/browse/RMET-4780)
+
 2.6.8-OS24 - 2025-09-30
 ------------------
 - Fix: [android] Removes the `kotlin-kapt` plugin that was being added, fixing builds for Capacitor apps (https://outsystemsrd.atlassian.net/browse/RMET-4515)
