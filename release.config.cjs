@@ -1,10 +1,48 @@
 const fs = require('fs');
-const xml2js = require('xml2js');
+
+const fixedBaseVersion = "2.6.8-OS";
 
 module.exports = {
   branches: ['main'],
-  tagFormat: '${version}',  // semantic-release uses vX.Y.Z by default, but our cordova plugins expect X.Y.Z
+  tagFormat: '${version}',
+
   plugins: [
+    {
+      verifyConditions: () => {},
+      analyzeCommits: () => {
+        // since semantic-release expects an appropriate value for release
+        //  but this plugin does not use semantic versioning, we just return 'patch' to allow the release checks to proceed
+        return 'patch';
+      },
+      generateNotes: () => '',
+
+      prepare: (pluginConfig, context) => {
+        const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+        const current = pkg.version;
+
+        // Expected format: X.Y.Z-OS{A}  → split on "-OS"
+        const base = fixedBaseVersion; // e.g. "1.2.3-OS"
+        const basePrefix = base + "";
+
+        let nextA = 1;
+
+        if (current.startsWith(basePrefix)) {
+          const suffix = current.replace(basePrefix, ''); // e.g. "12"
+          const num = parseInt(suffix, 10);
+          if (!isNaN(num)) nextA = num + 1;
+        }
+
+        const nextVersion = `${basePrefix}${nextA}`;
+
+        context.nextRelease = {
+          type: 'patch',
+          version: nextVersion,
+          gitTag: nextVersion
+        };
+
+        context.logger.log(`🔢 Next fixed version will be: ${nextVersion}`);
+      },
+    },
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     [
