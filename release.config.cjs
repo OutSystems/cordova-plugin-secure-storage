@@ -11,8 +11,9 @@ module.exports = {
     {
       verifyConditions: () => {},
       analyzeCommits: () => {
-        // since semantic-release expects an appropriate value for release
-        //  but this plugin does not use semantic versioning, we just return 'patch' to allow the release checks to proceed
+        // Since semantic-release expects an appropriate value for release
+        //  but this plugin does not use semantic versioning.
+        // We just return 'patch' to allow the release checks to proceed
         return 'patch';
       },
       generateNotes: () => '',
@@ -22,7 +23,7 @@ module.exports = {
         const current = pkg.version;
 
         // Expected format: X.Y.Z-OS{A}  → split on "-OS"
-        const base = fixedBaseVersion; // e.g. "1.2.3-OS"
+        const base = fixedBaseVersion;
         const basePrefix = base + "";
 
         let nextA = 1;
