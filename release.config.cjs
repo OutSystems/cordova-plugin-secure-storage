@@ -45,6 +45,7 @@ module.exports = {
   branches: [
     { name: 'outsystems', prerelease: false },
   ],
+  repositoryUrl: 'https://github.com/OS-pedrogustavobilro/cordova-plugin-secure-storage.git',
   tagFormat: '${version}',
   plugins: [
     customVersionPlugin,
