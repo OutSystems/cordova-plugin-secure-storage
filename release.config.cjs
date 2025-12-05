@@ -3,7 +3,9 @@ const fs = require('fs');
 const fixedBaseVersion = "2.6.8-OS";
 
 module.exports = {
-  branches: ['main'],
+  branches: [
+    { name: 'outsystems', prerelease: false }
+  ],
   tagFormat: '${version}',
 
   plugins: [
