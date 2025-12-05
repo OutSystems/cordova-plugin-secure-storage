@@ -1,4 +1,5 @@
 const fs = require('fs');
+const xml2js = require('xml2js');
 
 const fixedBaseVersion = "2.6.8-OS";
 
