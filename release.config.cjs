@@ -7,7 +7,6 @@ module.exports = {
     { name: 'outsystems', prerelease: false }
   ],
   tagFormat: '${version}',
-
   plugins: [
     {
       verifyConditions: () => {},
