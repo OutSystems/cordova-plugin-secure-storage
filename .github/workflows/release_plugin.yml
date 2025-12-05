@@ -1,4 +1,4 @@
-name: Release Cordova Plugin (GitHub)!
+name: Release Cordova Plugin (GitHub)
 
 on:
   workflow_dispatch:
