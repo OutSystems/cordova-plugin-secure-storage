@@ -44,8 +44,15 @@
     "capacitor:update:after": "node build-actions/insert_azure_repository.js"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.2",
+    "@semantic-release/npm": "^13.1.2",
+    "semantic-release": "^25.0.2",
     "cordova-plugin-test-framework": ">=1.0.0",
-    "eslint": ""
+    "eslint": "",
+    "xml2js": "^0.6.2"
   },
   "license": "MIT",
   "bugs": {
