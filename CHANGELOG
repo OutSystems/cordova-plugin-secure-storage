@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS26 - 2026-01-05
+------------------
+- Chore: [iOS] Remove unnecessary dependency to OSCommonPluginLib on iOS (https://outsystemsrd.atlassian.net/browse/RMET-4899)
+
 2.6.8-OS25 - 2025-11-14
 ------------------
 - Fix: [android] Fixes missing strings.xml on target project (https://outsystemsrd.atlassian.net/browse/RMET-4780)
