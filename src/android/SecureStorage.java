@@ -1,33 +1,15 @@
 package com.crypho.plugins;
 
-import java.io.File;
-import java.lang.reflect.Method;
-import java.security.SecureRandom;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.admin.DevicePolicyManager;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.preference.PreferenceManager;
-import android.security.keystore.UserNotAuthenticatedException;
-import android.telecom.Call;
-import android.util.Log;
-import android.util.Base64;
-import android.os.Build;
 import android.app.KeyguardManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Pair;
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.security.keystore.UserNotAuthenticatedException;
+import android.util.Base64;
+import android.util.Log;
 
 import com.outsystems.plugins.keystore.controller.KeystoreController;
 import com.outsystems.plugins.keystore.controller.KeystoreError;
@@ -36,11 +18,20 @@ import com.outsystems.plugins.keystore.controller.OSKSTRBiometricPromptInfo;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONArray;
 
-import javax.crypto.IllegalBlockSizeException;
+import java.io.File;
+import java.lang.reflect.Method;
+import java.security.SecureRandom;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class SecureStorage extends CordovaPlugin {
     private final ExecutorService threadPool = Executors.newCachedThreadPool();
