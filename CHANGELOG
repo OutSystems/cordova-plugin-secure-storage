@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS27 - 2026-01-13
+------------------
+- Chore: [Android] Remove unused dependencies to `oscore` and `oscordova` libs (https://outsystemsrd.atlassian.net/browse/RMET-4900)
+
 2.6.8-OS26 - 2026-01-05
 ------------------
 - Chore: [iOS] Remove unnecessary dependency to OSCommonPluginLib on iOS (https://outsystemsrd.atlassian.net/browse/RMET-4899)
