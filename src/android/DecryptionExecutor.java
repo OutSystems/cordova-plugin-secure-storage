@@ -1,6 +1,5 @@
 package com.crypho.plugins;
 
-
 import android.util.Log;
 import java.util.concurrent.Callable;
 
