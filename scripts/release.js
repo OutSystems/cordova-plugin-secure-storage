@@ -96,12 +96,24 @@ function updatePackageJson(newVersion) {
  */
 async function getCommitsSinceLastTag() {
   try {
-    // Get all tags
-    const tags = await git.tags();
-    const tagList = tags.all;
+    // Get all local tags (not from remotes)
+    // Use git command directly to ensure we only get local tags
+    let tagList = [];
+    try {
+      const tagOutput = await git.raw(['tag', '-l']);
+      tagList = tagOutput.trim().split('\n').filter(tag => tag.length > 0);
+    } catch (error) {
+      console.warn('⚠️  Could not list tags:', error.message);
+    }
     
-    if (tagList.length === 0) {
-      // No tags, get all commits
+    // Filter tags to only those matching our version format (X.Y.Z-OS(A))
+    // Example: 2.6.8-OS25, 2.6.8-OS24, etc.
+    const versionTagPattern = new RegExp(`^${BASE_VERSION.replace('.', '\\.')}\\d+$`);
+    const versionTags = tagList.filter(tag => versionTagPattern.test(tag));
+    
+    if (versionTags.length === 0) {
+      // No version tags found, get all commits
+      console.log('📋 No version tags found, getting all commits...');
       const log = await git.log();
       const commits = log.all.map(commit => ({
         hash: commit.hash.substring(0, 7),
@@ -116,12 +128,25 @@ async function getCommitsSinceLastTag() {
       return commits;
     }
     
-    // Get the latest tag
-    const latestTag = tagList[tagList.length - 1];
+    // Sort tags by versionCode (the number after -OS)
+    versionTags.sort((a, b) => {
+      const codeA = parseInt(a.replace(BASE_VERSION, ''), 10);
+      const codeB = parseInt(b.replace(BASE_VERSION, ''), 10);
+      return codeA - codeB;
+    });
+    
+    // Get the latest tag (highest versionCode)
+    const latestTag = versionTags[versionTags.length - 1];
     console.log(`📋 Found latest tag: ${latestTag}`);
     
-    // Check if HEAD is at the same commit as the latest tag
-    const tagCommit = await git.revparse([latestTag]);
+    // Verify the tag exists in the current repository
+    let tagCommit;
+    try {
+      tagCommit = await git.revparse([latestTag]);
+    } catch (error) {
+      throw new Error(`Tag ${latestTag} does not exist in this repository. It may be from an upstream remote.`);
+    }
+    
     const headCommit = await git.revparse(['HEAD']);
     
     if (tagCommit === headCommit) {
