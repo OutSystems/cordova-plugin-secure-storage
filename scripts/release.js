@@ -112,9 +112,9 @@ async function getCommitsSinceLastTag() {
     const versionTags = tagList.filter(tag => versionTagPattern.test(tag));
     
     if (versionTags.length === 0) {
-      // No version tags found, get all commits
+      // No version tags found, get all commits (excluding merge commits)
       console.log('📋 No version tags found, getting all commits...');
-      const log = await git.log();
+      const log = await git.log(['--no-merges']);
       const commits = log.all.map(commit => ({
         hash: commit.hash.substring(0, 7),
         message: commit.message,
@@ -154,11 +154,9 @@ async function getCommitsSinceLastTag() {
       return [];
     }
     
-    // Get commits between latest tag and HEAD (excluding the tag commit itself)
-    const log = await git.log({
-      from: latestTag,
-      to: 'HEAD',
-    });
+    // Get commits between latest tag and HEAD (excluding merge commits and the tag commit itself)
+    // Use raw git command to exclude merge commits
+    const log = await git.log([`${latestTag}..HEAD`, '--no-merges']);
     
     // Filter out the tag commit itself if it's included
     const commits = log.all
@@ -186,14 +184,8 @@ async function getCommitsSinceLastTag() {
  * @returns {{type: string, scope: string|null, message: string}} - Parsed commit
  */
 function parseCommitMessage(message) {
-  // Remove merge commit prefixes
-  let formatted = message
-    .replace(/^Merge.*?:\s*/i, '')
-    .replace(/^Merge branch.*$/i, '')
-    .trim();
-  
   // Split by newline and take first line
-  formatted = formatted.split('\n')[0];
+  let formatted = message.trim().split('\n')[0];
   
   // Try to parse conventional commit format: type(scope): message
   // Examples: "fix(android): message", "feat: message", "chore(ios): message"
