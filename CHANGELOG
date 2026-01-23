@@ -1,3 +1,276 @@
+## [2.6.8-OS29]
+
+## 2026-01-23
+
+- feat: update android aar
+- feat: Create new SecureStorage implementation structure (#16)
+- feat: creates to unlock credentials using KeyguardManager
+- feat: removes intent for Android versions > P
+- fix: another mock change
+- fix: Mock release
+- fix(android): missing strings.xml on target project (#41)
+- fix(android): remove unnecessary `kotlin-kapt`, fixing Capacitor builds (#40)
+- fix: Capacitor hook for Azure Repository
+- fix: Replace iOS code for library (#24)
+- fix: Return Empty Result (#21)
+- fix: Avoid Keychain's errSecInteractionNotAllowed error on iOS 15
+- fix: removed validity date limites at start and end
+- fix: added missing exceptions to isEntryAvailable method
+- fix: verify if the key is permanently invalidated
+- fix: implemented handle authentication skippd method
+- fix: modified to test over android 6 on handle lock
+- fix: remove usage of createConfirmDeviceCredentialIntent altogether
+- fix: add more logging
+- fix: remove calling of createConfirmDeviceCredentialIntent intent
+- fix: improve mutual exclusion in concurrent init calls
+- fix: stores are no longer created when lock screen authentication fails
+- fix: add BiometricPrompt and ACTION_SET_NEW_PASSWORD
+- fix: use 28 directly instead of referencing Build.VERSION_CODES.P
+- chore(release): 2.6.8-OS28 [skip ci]
+- chore: Merge remote-tracking branch 'upstream/outsystems' into outsystems
+- chore: remove splice from release script
+- chore: Revert "chore(release): 2.6.8-OS26 [skip ci]"
+- chore(release): 2.6.8-OS26 [skip ci]
+- chore: fix package.json
+- chore: uncomment script
+- chore: Add header to old changelog
+- chore: Revert "test commit"
+- chore: test commit
+- chore(android): remove unused dependencies to `oscore` and `oscordova` libs (#43)
+- chore: remove unnecessary dependency to OSCommonLib on iOS (#42)
+- chore: Revert "chore(release): 1.0.0 [skip ci]"
+- chore(release): 1.0.0 [skip ci]
+- chore: add missing repo
+- chore: add missing import to release config
+- chore: remove exclamation mark
+- chore: Fix branch where release runs from
+- chore: update release config for X.Y.Z-OS{A} format
+- chore: Add note to changelog
+- chore: RMET-4025 - Prepare to release version `2.6.8-OS23` (#39)
+- chore: Merge pull request #37 from OutSystems/development
+- chore: Merge pull request #36 from OutSystems/fix/RMET-4257/release-build
+- chore: prepare to release 2.6.8-OS22
+- chore: RMET-3652 KeyStore Plugin - Add build action information (#35)
+- chore: Merge pull request #34 from OutSystems/development
+- chore: bump versions (#33)
+- chore: RMET-4037 ::: iOS ::: Remove `cordova-plugin-add-swift-support` Plugin (#32)
+- chore: 
+- chore: RMET-3607 :: prepare for release (#31)
+- chore: Merge pull request #30 from OutSystems/feat/RMET-3607/update-errors
+- chore: 
+- chore: RMET-3408 KeyStore Plugin - Prepare release of version `2.6.8-OS19` (#29)
+- chore: update dependency to OSKeystoreAndroid-Lib
+- chore: RMET-3408 KeyStore Plugin - Set auth prompt text (title, subtitle, and negative button) (#28)
+- chore: add CODEOWNERS (#27)
+- chore(release): raise to version 2.6.8-OS18
+- chore: RMET-2994 KeyStore Plugin - Remove allow backup (#25)
+- chore(release): raise to version 2.6.8-OS17
+- chore: RMET-2190 KeyStore Plugin - Include alternative method of authentication for Android <= 10 (#23)
+- chore(release): raise to version 2.6.8-OS16
+- chore: RMET-2036 - Removed dependency to jcenter() (#22)
+- chore: RMET-2045 - KeyStore Plugin - Use fixed versions (#20)
+- chore: Add Unreleased Tag to CHANGELOG
+- chore(release): raise to version 2.6.8-OS15
+- chore: Add Unreleased Tag to CHANGELOG
+- chore(release): raise to version 2.6.8-OS14
+- chore: Replace OSCore by OSCommonPluginLib (#19)
+- chore(release): raise to version 2.6.8-OS13
+- chore: RMET-1843 KeyStore Plugin - SetValue, GetValue, RemoveKey and Migration with EncryptedSharedPreferences (#18)
+- chore: Merge pull request #15 from OutSystems/fix/RMET-1417/securestorage-ios15-error
+- chore: raised version to 2.6.8-OS11
+- chore: Merge pull request #14 from OutSystems/fix/RMET-1182/cipher-database-errors
+- chore: changelog updated
+- chore: Merge pull request #13 from OutSystems/fix/RMET-1374/fix-key-invalidated-error
+- chore: change log updated
+- chore: Merge pull request #12 from OutSystems/fix/RMET-1373/fix-auth-skip-flow
+- chore: chancelog update and raise version to 2.6.8-OS9
+- chore(release): raised version to 2.6.8-OS8
+- chore: Merge pull request #11 from OutSystems/fix/RMET-1292/handle-lock-device-error
+- chore(release): raised version to 2.6.8-OS7
+- chore: chore(release) : raise version to 2.6.8-OS6
+- chore: Merge pull request #10 from OutSystems/fix/RMET-377/Bad-Store-Count
+- chore: fix : simplification of the if clause detecting plugin stores
+- chore: fix : initialization change to better count the number of existing stores and to prevent count from unwanted stores
+- chore: chore(release) : raise to version 2.6.8-OS5
+- chore: Merge pull request #9 from OutSystems/fix/RMET-195/new-key-generator-and-migration
+- chore: fix : now launches callback.error upon a failed read or write preventing bad migrations
+- chore: fix. : Another log change
+- chore: fix : prevented adding of error results in migration
+- chore: fix : updating a comment for better code clarity
+- chore: fix : removing some useless logs
+- chore: fix : commented some rationale for some of the numbers used in the keygen
+- chore: fix : final adjustment for OS check
+- chore: fix : Added executor results for easy Error manage
+- chore: fix : changed migration string to free future namespace
+- chore: fix :  missing error identifier
+- chore: fix : Android < 6 exception when checking if key was hardware secure
+- chore: fix : key validity extended to avoid unauthorized exception
+- chore: fix : timezone issue for some devices, producing keynotyetvalid exception
+- chore: fix : bad leftover method change from converting code to plugin repo
+- chore: fix : new key generator and data migration
+- chore(release): raise version to 2.6.8-OS4
+- chore: Merge pull request #8 from OutSystems/fix/RNMT-3803/review-lock-screen
+- chore(release): raise version to 2.6.8-OS3
+- chore: Merge pull request #7 from OutSystems/fix/RNMT-3824/concurrent-inits
+- chore: Revert "fix: stores are no longer created when lock screen authentication fails"
+- chore(release): raise version to 2.6.8-OS2
+- chore: Merge pull request #6 from OutSystems/fix/RNMT-3604/lock-screen-bypassable
+- chore(release): raise version to 2.6.8-OS1
+- chore: Merge pull request #5 from OutSystems/fix/RNMT-3540/android-10-crash
+- chore: Merge pull request #4 from OutSystems/fix/RNMT-3257/fix-android10-support
+- chore: raises version to 2.6.8-OS
+- chore: Merge pull request #3 from OutSystems/RNMT-3257
+- chore: Merge pull request #2 from usernuno/outsystems
+- chore: 
+- chore: add PULL_REQUEST_TEMPLATE.md
+- chore: Merge commit '3dc645f4b8f8152227e6764adc4a5f5a18880465'
+- chore: 
+- chore: #RNMT-184 Update README with support disclaimer
+- refactor: Replace semantic-release with custom release script
+- refactor: Extract release customization of version to variable
+- ci: Add workflow for release
+- ci: Add initial semantic-release configuration
+- ci: Validate GitHub PR title
+- refactor: Update iOS Library (#17)
+- docs: improve code documentation
+
+
+## [2.6.8-OS28]
+
+## 2026-01-23
+
+- feat: update android aar
+- feat: Create new SecureStorage implementation structure (#16)
+- feat: creates to unlock credentials using KeyguardManager
+- feat: removes intent for Android versions > P
+- fix: another mock change
+- fix: Mock release
+- fix(android): missing strings.xml on target project (#41)
+- fix(android): remove unnecessary `kotlin-kapt`, fixing Capacitor builds (#40)
+- fix: Capacitor hook for Azure Repository
+- fix: Replace iOS code for library (#24)
+- fix: Return Empty Result (#21)
+- fix: Avoid Keychain's errSecInteractionNotAllowed error on iOS 15
+- fix: removed validity date limites at start and end
+- fix: added missing exceptions to isEntryAvailable method
+- fix: verify if the key is permanently invalidated
+- fix: implemented handle authentication skippd method
+- fix: modified to test over android 6 on handle lock
+- fix: remove usage of createConfirmDeviceCredentialIntent altogether
+- fix: add more logging
+- fix: remove calling of createConfirmDeviceCredentialIntent intent
+- fix: improve mutual exclusion in concurrent init calls
+- fix: stores are no longer created when lock screen authentication fails
+- fix: add BiometricPrompt and ACTION_SET_NEW_PASSWORD
+- fix: use 28 directly instead of referencing Build.VERSION_CODES.P
+- chore: Merge remote-tracking branch 'upstream/outsystems' into outsystems
+- chore: remove splice from release script
+- chore: Revert "chore(release): 2.6.8-OS26 [skip ci]"
+- chore(release): 2.6.8-OS26 [skip ci]
+- chore: fix package.json
+- chore: uncomment script
+- chore: Add header to old changelog
+- chore: Revert "test commit"
+- chore: test commit
+- chore(android): remove unused dependencies to `oscore` and `oscordova` libs (#43)
+- chore: remove unnecessary dependency to OSCommonLib on iOS (#42)
+- chore: Revert "chore(release): 1.0.0 [skip ci]"
+- chore(release): 1.0.0 [skip ci]
+- chore: add missing repo
+- chore: add missing import to release config
+- chore: remove exclamation mark
+- chore: Fix branch where release runs from
+- chore: update release config for X.Y.Z-OS{A} format
+- chore: Add note to changelog
+- chore: RMET-4025 - Prepare to release version `2.6.8-OS23` (#39)
+- chore: Merge pull request #37 from OutSystems/development
+- chore: Merge pull request #36 from OutSystems/fix/RMET-4257/release-build
+- chore: prepare to release 2.6.8-OS22
+- chore: RMET-3652 KeyStore Plugin - Add build action information (#35)
+- chore: Merge pull request #34 from OutSystems/development
+- chore: bump versions (#33)
+- chore: RMET-4037 ::: iOS ::: Remove `cordova-plugin-add-swift-support` Plugin (#32)
+- chore: 
+- chore: RMET-3607 :: prepare for release (#31)
+- chore: Merge pull request #30 from OutSystems/feat/RMET-3607/update-errors
+- chore: 
+- chore: RMET-3408 KeyStore Plugin - Prepare release of version `2.6.8-OS19` (#29)
+- chore: update dependency to OSKeystoreAndroid-Lib
+- chore: RMET-3408 KeyStore Plugin - Set auth prompt text (title, subtitle, and negative button) (#28)
+- chore: add CODEOWNERS (#27)
+- chore(release): raise to version 2.6.8-OS18
+- chore: RMET-2994 KeyStore Plugin - Remove allow backup (#25)
+- chore(release): raise to version 2.6.8-OS17
+- chore: RMET-2190 KeyStore Plugin - Include alternative method of authentication for Android <= 10 (#23)
+- chore(release): raise to version 2.6.8-OS16
+- chore: RMET-2036 - Removed dependency to jcenter() (#22)
+- chore: RMET-2045 - KeyStore Plugin - Use fixed versions (#20)
+- chore: Add Unreleased Tag to CHANGELOG
+- chore(release): raise to version 2.6.8-OS15
+- chore: Add Unreleased Tag to CHANGELOG
+- chore(release): raise to version 2.6.8-OS14
+- chore: Replace OSCore by OSCommonPluginLib (#19)
+- chore(release): raise to version 2.6.8-OS13
+- chore: RMET-1843 KeyStore Plugin - SetValue, GetValue, RemoveKey and Migration with EncryptedSharedPreferences (#18)
+- chore: Merge pull request #15 from OutSystems/fix/RMET-1417/securestorage-ios15-error
+- chore: raised version to 2.6.8-OS11
+- chore: Merge pull request #14 from OutSystems/fix/RMET-1182/cipher-database-errors
+- chore: changelog updated
+- chore: Merge pull request #13 from OutSystems/fix/RMET-1374/fix-key-invalidated-error
+- chore: change log updated
+- chore: Merge pull request #12 from OutSystems/fix/RMET-1373/fix-auth-skip-flow
+- chore: chancelog update and raise version to 2.6.8-OS9
+- chore(release): raised version to 2.6.8-OS8
+- chore: Merge pull request #11 from OutSystems/fix/RMET-1292/handle-lock-device-error
+- chore(release): raised version to 2.6.8-OS7
+- chore: chore(release) : raise version to 2.6.8-OS6
+- chore: Merge pull request #10 from OutSystems/fix/RMET-377/Bad-Store-Count
+- chore: fix : simplification of the if clause detecting plugin stores
+- chore: fix : initialization change to better count the number of existing stores and to prevent count from unwanted stores
+- chore: chore(release) : raise to version 2.6.8-OS5
+- chore: Merge pull request #9 from OutSystems/fix/RMET-195/new-key-generator-and-migration
+- chore: fix : now launches callback.error upon a failed read or write preventing bad migrations
+- chore: fix. : Another log change
+- chore: fix : prevented adding of error results in migration
+- chore: fix : updating a comment for better code clarity
+- chore: fix : removing some useless logs
+- chore: fix : commented some rationale for some of the numbers used in the keygen
+- chore: fix : final adjustment for OS check
+- chore: fix : Added executor results for easy Error manage
+- chore: fix : changed migration string to free future namespace
+- chore: fix :  missing error identifier
+- chore: fix : Android < 6 exception when checking if key was hardware secure
+- chore: fix : key validity extended to avoid unauthorized exception
+- chore: fix : timezone issue for some devices, producing keynotyetvalid exception
+- chore: fix : bad leftover method change from converting code to plugin repo
+- chore: fix : new key generator and data migration
+- chore(release): raise version to 2.6.8-OS4
+- chore: Merge pull request #8 from OutSystems/fix/RNMT-3803/review-lock-screen
+- chore(release): raise version to 2.6.8-OS3
+- chore: Merge pull request #7 from OutSystems/fix/RNMT-3824/concurrent-inits
+- chore: Revert "fix: stores are no longer created when lock screen authentication fails"
+- chore(release): raise version to 2.6.8-OS2
+- chore: Merge pull request #6 from OutSystems/fix/RNMT-3604/lock-screen-bypassable
+- chore(release): raise version to 2.6.8-OS1
+- chore: Merge pull request #5 from OutSystems/fix/RNMT-3540/android-10-crash
+- chore: Merge pull request #4 from OutSystems/fix/RNMT-3257/fix-android10-support
+- chore: raises version to 2.6.8-OS
+- chore: Merge pull request #3 from OutSystems/RNMT-3257
+- chore: Merge pull request #2 from usernuno/outsystems
+- chore: 
+- chore: add PULL_REQUEST_TEMPLATE.md
+- chore: Merge commit '3dc645f4b8f8152227e6764adc4a5f5a18880465'
+- chore: 
+- chore: #RNMT-184 Update README with support disclaimer
+- refactor: Replace semantic-release with custom release script
+- refactor: Extract release customization of version to variable
+- ci: Add workflow for release
+- ci: Add initial semantic-release configuration
+- ci: Validate GitHub PR title
+- refactor: Update iOS Library (#17)
+- docs: improve code documentation
+
+
 ## Changelog (old)
 =========
 
