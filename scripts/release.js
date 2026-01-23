@@ -378,7 +378,7 @@ async function main() {
     await git.add([PLUGIN_XML_PATH, PACKAGE_JSON_PATH, CHANGELOG_PATH]);
     
     // 7. Commit changes
-    /*console.log('💾 Committing changes...');
+    console.log('💾 Committing changes...');
     await git.commit(`chore(release): ${nextVersion} [skip ci]\n\n${changelogEntry.split('\n').slice(0, 5).join('\n')}`);
     
     // 8. Create tag
@@ -393,7 +393,7 @@ async function main() {
     
     // 10. Create GitHub release
     console.log('\n🎉 Creating GitHub release...');
-    await createGitHubRelease(nextVersion, changelogEntry);*/
+    await createGitHubRelease(nextVersion, changelogEntry);
     
     console.log('\n✅ Release completed successfully!');
     console.log(`   Version: ${nextVersion}`);
