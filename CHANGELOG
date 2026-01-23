@@ -1,3 +1,27 @@
+## [2.6.8-OS26]
+
+## 2026-01-23
+
+- fix: another mock change
+- fix: Mock release
+- chore: fix package.json
+- chore: uncomment script
+- chore: Add header to old changelog
+- chore: Revert "chore(release): 1.0.0 [skip ci]"
+- chore(release): 1.0.0 [skip ci]
+- chore: add missing repo
+- chore: add missing import to release config
+- chore: remove exclamation mark
+- chore: Fix branch where release runs from
+- chore: update release config for X.Y.Z-OS{A} format
+- chore: Add note to changelog
+- refactor: Replace semantic-release with custom release script
+- refactor: Extract release customization of version to variable
+- ci: Add workflow for release
+- ci: Add initial semantic-release configuration
+- ci: Validate GitHub PR title
+
+
 ## Changelog (old)
 =========
 
