@@ -1,4 +1,3 @@
-import OSCommonPluginLib
 import OSKeyStoreLib
 
 @objc(SecureStorage)
@@ -119,11 +118,8 @@ class SecureStorage: CDVPlugin {
             self.plugin?.delete(service: service)
         }
     }
-}
-
-// MARK: - OSCore's PlatformProtocol Methods
-extension SecureStorage: PlatformProtocol {
-    func sendResult(result: String?, error: NSError?, callBackID: String) {
+    
+    private func sendResult(result: String?, error: NSError?, callBackID: String) {
         var pluginResult = CDVPluginResult(status: CDVCommandStatus_ERROR)
 
         if let error = error {

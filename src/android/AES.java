@@ -1,19 +1,17 @@
 package com.crypho.plugins;
 
-import android.util.Log;
 import android.util.Base64;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.security.Key;
 import java.security.SecureRandom;
 
 import javax.crypto.Cipher;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
 public class AES {
 	private static final String CIPHER_MODE = "CCM";
