@@ -249,7 +249,7 @@ function formatCommitForChangelog(parsed) {
 function generateChangelogEntry(version, commits) {
   const today = new Date().toISOString().split('T')[0];
   let entry = `## [${version}]\n\n`;
-  entry += `## ${today}\n\n`;
+  entry += `### ${today}\n\n`;
   
   if (commits.length === 0) {
     entry += '- No changes\n\n';
