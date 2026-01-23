@@ -379,7 +379,7 @@ async function main() {
     
     // 7. Commit changes
     console.log('💾 Committing changes...');
-    await git.commit(`chore(release): ${nextVersion} [skip ci]\n\n${changelogEntry.split('\n').slice(0, 5).join('\n')}`);
+    await git.commit(`chore(release): ${nextVersion} [skip ci]\n\n${changelogEntry}`);
     
     // 8. Create tag
     console.log('🏷️  Creating git tag...');
