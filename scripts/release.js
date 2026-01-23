@@ -103,36 +103,55 @@ async function getCommitsSinceLastTag() {
     if (tagList.length === 0) {
       // No tags, get all commits
       const log = await git.log();
-      return log.all.map(commit => ({
+      const commits = log.all.map(commit => ({
         hash: commit.hash.substring(0, 7),
         message: commit.message,
         date: commit.date,
       }));
+      
+      if (commits.length === 0) {
+        throw new Error('No commits found in repository');
+      }
+      
+      return commits;
     }
     
     // Get the latest tag
     const latestTag = tagList[tagList.length - 1];
     console.log(`📋 Found latest tag: ${latestTag}`);
     
-    // Get commits since latest tag
+    // Check if HEAD is at the same commit as the latest tag
+    const tagCommit = await git.revparse([latestTag]);
+    const headCommit = await git.revparse(['HEAD']);
+    
+    if (tagCommit === headCommit) {
+      // HEAD is at the same commit as the latest tag, no new commits
+      return [];
+    }
+    
+    // Get commits between latest tag and HEAD (excluding the tag commit itself)
     const log = await git.log({
       from: latestTag,
       to: 'HEAD',
     });
     
-    return log.all.map(commit => ({
-      hash: commit.hash.substring(0, 7),
-      message: commit.message,
-      date: commit.date,
-    }));
+    // Filter out the tag commit itself if it's included
+    const commits = log.all
+      .filter(commit => commit.hash !== tagCommit)
+      .map(commit => ({
+        hash: commit.hash.substring(0, 7),
+        message: commit.message,
+        date: commit.date,
+      }));
+    
+    return commits;
   } catch (error) {
-    console.warn('⚠️  Could not get commits since last tag, using all commits:', error.message);
-    const log = await git.log();
-    return log.all.map(commit => ({
-      hash: commit.hash.substring(0, 7),
-      message: commit.message,
-      date: commit.date,
-    }));
+    // If it's our custom error about no commits, re-throw it
+    if (error.message === 'No commits found in repository' || error.message.includes('No new commits')) {
+      throw error;
+    }
+    console.warn('⚠️  Could not get commits since last tag:', error.message);
+    throw new Error(`Failed to get commits: ${error.message}`);
   }
 }
 
@@ -361,6 +380,11 @@ async function main() {
     console.log('📋 Gathering commits since last release...');
     const commits = await getCommitsSinceLastTag();
     console.log(`   Found ${commits.length} commit(s)\n`);
+    
+    // Check if there are no new commits
+    if (commits.length === 0) {
+      throw new Error('No new commits since last release. Nothing to release.');
+    }
     
     // 4. Generate changelog entry
     const changelogEntry = generateChangelogEntry(nextVersion, commits);
