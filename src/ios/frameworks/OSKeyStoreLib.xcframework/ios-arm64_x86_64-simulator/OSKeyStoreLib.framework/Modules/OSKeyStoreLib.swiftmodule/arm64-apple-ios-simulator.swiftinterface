@@ -11,8 +11,17 @@ public protocol OSKSTCallbackDelegate : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   func callback(result: Swift.String?, error: OSKeyStoreLib.OSKSTError?)
   #endif
+  func callback(error: OSKeyStoreLib.OSKSTError)
+  func callback(text: Swift.String)
+  func callbackSuccess()
+}
+extension OSKeyStoreLib.OSKSTCallbackDelegate {
+  public func callback(error: OSKeyStoreLib.OSKSTError)
+  public func callback(text: Swift.String)
+  public func callbackSuccess()
 }
 public struct OSKSTFactory {
+  public static func createKeystoreWrapper(withDelegate delegate: any OSKeyStoreLib.OSKSTCallbackDelegate) -> any OSKeyStoreLib.OSKSTActionDelegate
 }
 public protocol OSKSTActionDelegate : AnyObject {
   func save(service: Swift.String, account: Swift.String, data: Foundation.Data, useAccessControl: Swift.Bool)

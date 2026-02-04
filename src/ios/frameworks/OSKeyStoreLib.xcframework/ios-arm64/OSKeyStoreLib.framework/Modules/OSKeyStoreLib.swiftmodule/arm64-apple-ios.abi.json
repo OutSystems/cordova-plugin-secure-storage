@@ -57,6 +57,171 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTError",
+                "printedName": "OSKeyStoreLib.OSKSTError",
+                "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP8callback5erroryAA10OSKSTErrorO_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP8callback5erroryAA10OSKSTErrorO_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP8callback4textySS_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP8callback4textySS_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callbackSuccess",
+            "printedName": "callbackSuccess()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP15callbackSuccessyyF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP15callbackSuccessyyF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTError",
+                "printedName": "OSKeyStoreLib.OSKSTError",
+                "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback5erroryAA10OSKSTErrorO_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback5erroryAA10OSKSTErrorO_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback4textySS_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback4textySS_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callbackSuccess",
+            "printedName": "callbackSuccess()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegatePAAE15callbackSuccessyyF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegatePAAE15callbackSuccessyyF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -90,6 +255,37 @@
         "kind": "TypeDecl",
         "name": "OSKSTFactory",
         "printedName": "OSKSTFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "createKeystoreWrapper",
+            "printedName": "createKeystoreWrapper(withDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTActionDelegate",
+                "printedName": "any OSKeyStoreLib.OSKSTActionDelegate",
+                "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTCallbackDelegate",
+                "printedName": "any OSKeyStoreLib.OSKSTCallbackDelegate",
+                "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib12OSKSTFactoryV21createKeystoreWrapper12withDelegateAA011OSKSTActionI0_pAA013OSKSTCallbackI0_p_tFZ",
+            "mangledName": "$s13OSKeyStoreLib12OSKSTFactoryV21createKeystoreWrapper12withDelegateAA011OSKSTActionI0_pAA013OSKSTCallbackI0_p_tFZ",
+            "moduleName": "OSKeyStoreLib",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
         "declKind": "Struct",
         "usr": "s:13OSKeyStoreLib12OSKSTFactoryV",
         "mangledName": "$s13OSKeyStoreLib12OSKSTFactoryV",
