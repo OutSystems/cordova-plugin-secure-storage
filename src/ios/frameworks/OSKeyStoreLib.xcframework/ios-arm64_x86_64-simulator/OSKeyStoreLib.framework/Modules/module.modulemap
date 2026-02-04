@@ -1,11 +1,4 @@
 framework module OSKeyStoreLib {
-  umbrella header "OSKeyStoreLib.h"
-  export *
-
-  module * { export * }
-}
-
-module OSKeyStoreLib.Swift {
   header "OSKeyStoreLib-Swift.h"
   requires objc
 }

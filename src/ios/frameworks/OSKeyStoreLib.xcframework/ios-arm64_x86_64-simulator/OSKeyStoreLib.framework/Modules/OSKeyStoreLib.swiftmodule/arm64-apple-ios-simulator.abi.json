@@ -312,6 +312,27 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
         "kind": "TypeDecl",
         "name": "OSKSTActionDelegate",
         "printedName": "OSKSTActionDelegate",
@@ -537,6 +558,13 @@
             "mangledName": "$ss8CopyableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
       },
       {
         "kind": "TypeDecl",
@@ -1176,6 +1204,20 @@
             "mangledName": "$ss16SendableMetatypeP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
       }
     ],
     "json_format_version": 8
@@ -1184,77 +1226,77 @@
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 126,
+      "offset": 145,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 162,
+      "offset": 181,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 193,
+      "offset": 212,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 223,
+      "offset": 242,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 248,
+      "offset": 267,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 275,
+      "offset": 294,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 301,
+      "offset": 320,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 339,
+      "offset": 358,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 363,
+      "offset": 382,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 397,
+      "offset": 416,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
-      "offset": 419,
+      "offset": 438,
       "length": 2,
       "value": "11"
     }
