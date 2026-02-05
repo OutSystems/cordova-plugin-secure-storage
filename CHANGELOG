@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS28 - 2026-02-03
+------------------
+- Fix: [iOS] Fix Bitcode error in App Store submission by re-building OSKeyStoreLib xcframework without Bitcode (https://outsystemsrd.atlassian.net/browse/RMET-4924)
+
 2.6.8-OS27 - 2026-01-13
 ------------------
 - Chore: [Android] Remove unused dependencies to `oscore` and `oscordova` libs (https://outsystemsrd.atlassian.net/browse/RMET-4900)

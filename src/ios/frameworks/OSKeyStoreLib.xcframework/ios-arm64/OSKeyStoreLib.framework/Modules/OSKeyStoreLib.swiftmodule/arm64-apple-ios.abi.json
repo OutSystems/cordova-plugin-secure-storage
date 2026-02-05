@@ -1,0 +1,1304 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "OSKeyStoreLib",
+    "printedName": "OSKeyStoreLib",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "OSKSTCallbackDelegate",
+        "printedName": "OSKSTCallbackDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(result:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OSKeyStoreLib.OSKSTError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP8callback6result5errorySSSg_AA10OSKSTErrorOSgtF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP8callback6result5errorySSSg_AA10OSKSTErrorOSgtF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTError",
+                "printedName": "OSKeyStoreLib.OSKSTError",
+                "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP8callback5erroryAA10OSKSTErrorO_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP8callback5erroryAA10OSKSTErrorO_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP8callback4textySS_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP8callback4textySS_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callbackSuccess",
+            "printedName": "callbackSuccess()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP15callbackSuccessyyF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP15callbackSuccessyyF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTError",
+                "printedName": "OSKeyStoreLib.OSKSTError",
+                "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback5erroryAA10OSKSTErrorO_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback5erroryAA10OSKSTErrorO_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callback",
+            "printedName": "callback(text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback4textySS_tF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegatePAAE8callback4textySS_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "callbackSuccess",
+            "printedName": "callbackSuccess()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegatePAAE15callbackSuccessyyF",
+            "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegatePAAE15callbackSuccessyyF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTCallbackDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP",
+        "mangledName": "$s13OSKeyStoreLib21OSKSTCallbackDelegateP",
+        "moduleName": "OSKeyStoreLib",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSKSTFactory",
+        "printedName": "OSKSTFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "createKeystoreWrapper",
+            "printedName": "createKeystoreWrapper(withDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTActionDelegate",
+                "printedName": "any OSKeyStoreLib.OSKSTActionDelegate",
+                "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OSKSTCallbackDelegate",
+                "printedName": "any OSKeyStoreLib.OSKSTCallbackDelegate",
+                "usr": "s:13OSKeyStoreLib21OSKSTCallbackDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib12OSKSTFactoryV21createKeystoreWrapper12withDelegateAA011OSKSTActionI0_pAA013OSKSTCallbackI0_p_tFZ",
+            "mangledName": "$s13OSKeyStoreLib12OSKSTFactoryV21createKeystoreWrapper12withDelegateAA011OSKSTActionI0_pAA013OSKSTCallbackI0_p_tFZ",
+            "moduleName": "OSKeyStoreLib",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13OSKeyStoreLib12OSKSTFactoryV",
+        "mangledName": "$s13OSKeyStoreLib12OSKSTFactoryV",
+        "moduleName": "OSKeyStoreLib",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSKSTActionDelegate",
+        "printedName": "OSKSTActionDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "save",
+            "printedName": "save(service:account:data:useAccessControl:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP4save7service7account4data16useAccessControlySS_SS10Foundation4DataVSbtF",
+            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegateP4save7service7account4data16useAccessControlySS_SS10Foundation4DataVSbtF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTActionDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTActionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "read",
+            "printedName": "read(service:account:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP4read7service7accountySS_SSSgtF",
+            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegateP4read7service7accountySS_SSSgtF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTActionDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTActionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete(service:account:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP6delete7service7accountySS_SSSgtF",
+            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegateP6delete7service7accountySS_SSSgtF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTActionDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTActionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "read",
+            "printedName": "read(service:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegatePAAE4read7serviceySS_tF",
+            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegatePAAE4read7serviceySS_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTActionDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTActionDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "delete",
+            "printedName": "delete(service:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegatePAAE6delete7serviceySS_tF",
+            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegatePAAE6delete7serviceySS_tF",
+            "moduleName": "OSKeyStoreLib",
+            "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTActionDelegate>",
+            "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTActionDelegate>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP",
+        "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegateP",
+        "moduleName": "OSKeyStoreLib",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSKSTError",
+        "printedName": "OSKSTError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "badArguments",
+            "printedName": "badArguments",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO12badArgumentsyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO12badArgumentsyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "operationUnimplemented",
+            "printedName": "operationUnimplemented",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO22operationUnimplementedyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO22operationUnimplementedyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidParameters",
+            "printedName": "invalidParameters",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO17invalidParametersyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO17invalidParametersyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "memoryAllocation",
+            "printedName": "memoryAllocation",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO16memoryAllocationyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO16memoryAllocationyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "unavailable",
+            "printedName": "unavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO11unavailableyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO11unavailableyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "duplicateItem",
+            "printedName": "duplicateItem",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO13duplicateItemyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO13duplicateItemyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "itemNotFound",
+            "printedName": "itemNotFound",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO12itemNotFoundyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO12itemNotFoundyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "userInterationNotAllowed",
+            "printedName": "userInterationNotAllowed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO24userInterationNotAllowedyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO24userInterationNotAllowedyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "dataDecode",
+            "printedName": "dataDecode",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO10dataDecodeyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO10dataDecodeyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "authenticationFailed",
+            "printedName": "authenticationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO20authenticationFailedyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO20authenticationFailedyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "general",
+            "printedName": "general",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(OSKeyStoreLib.OSKSTError.Type) -> OSKeyStoreLib.OSKSTError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "OSKeyStoreLib.OSKSTError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OSKSTError",
+                        "printedName": "OSKeyStoreLib.OSKSTError",
+                        "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO7generalyA2CmF",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO7generalyA2CmF",
+            "moduleName": "OSKeyStoreLib"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO16errorDescriptionSSSgvp",
+            "moduleName": "OSKeyStoreLib",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13OSKeyStoreLib10OSKSTErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO16errorDescriptionSSSgvg",
+                "moduleName": "OSKeyStoreLib",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OSKeyStoreLib.OSKSTError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OSKSTError",
+                    "printedName": "OSKeyStoreLib.OSKSTError",
+                    "usr": "s:13OSKeyStoreLib10OSKSTErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO8rawValueACSgSi_tcfc",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO8rawValueACSgSi_tcfc",
+            "moduleName": "OSKeyStoreLib",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13OSKeyStoreLib10OSKSTErrorO8rawValueSivp",
+            "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO8rawValueSivp",
+            "moduleName": "OSKeyStoreLib",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13OSKeyStoreLib10OSKSTErrorO8rawValueSivg",
+                "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO8rawValueSivg",
+                "moduleName": "OSKeyStoreLib",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13OSKeyStoreLib10OSKSTErrorO",
+        "mangledName": "$s13OSKeyStoreLib10OSKSTErrorO",
+        "moduleName": "OSKeyStoreLib",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomNSError",
+            "printedName": "CustomNSError",
+            "usr": "s:10Foundation13CustomNSErrorP",
+            "mangledName": "$s10Foundation13CustomNSErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 145,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 181,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 212,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 242,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 267,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 294,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 320,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 358,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 382,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 416,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/pedrobilro\/Desktop\/client_projects\/outsystems\/source_codes\/cordova_plugins_ios\/OSKeyStoreLib-ios\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 438,
+      "length": 2,
+      "value": "11"
+    }
+  ]
+}
