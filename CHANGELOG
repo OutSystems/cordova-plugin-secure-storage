@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS29 - 2026-03-06
+------------------
+- Fix: [iOS] - Update to library framework built with Xcode 16 and not 26 (https://outsystemsrd.atlassian.net/browse/RMET-5030).
+
 2.6.8-OS28 - 2026-02-03
 ------------------
 - Fix: [iOS] Fix Bitcode error in App Store submission by re-building OSKeyStoreLib xcframework without Bitcode (https://outsystemsrd.atlassian.net/browse/RMET-4924)
