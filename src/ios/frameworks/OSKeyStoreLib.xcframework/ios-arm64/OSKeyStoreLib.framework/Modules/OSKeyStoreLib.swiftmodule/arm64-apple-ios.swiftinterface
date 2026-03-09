@@ -1,16 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OSKeyStoreLib
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Foundation
 import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol OSKSTCallbackDelegate : AnyObject {
-  #if compiler(>=5.3) && $NonescapableTypes
   func callback(result: Swift.String?, error: OSKeyStoreLib.OSKSTError?)
-  #endif
   func callback(error: OSKeyStoreLib.OSKSTError)
   func callback(text: Swift.String)
   func callbackSuccess()
@@ -25,12 +23,8 @@ public struct OSKSTFactory {
 }
 public protocol OSKSTActionDelegate : AnyObject {
   func save(service: Swift.String, account: Swift.String, data: Foundation.Data, useAccessControl: Swift.Bool)
-  #if compiler(>=5.3) && $NonescapableTypes
   func read(service: Swift.String, account: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   func delete(service: Swift.String, account: Swift.String?)
-  #endif
 }
 extension OSKeyStoreLib.OSKSTActionDelegate {
   public func read(service: Swift.String)
@@ -48,14 +42,10 @@ public enum OSKSTError : Swift.Int, Foundation.CustomNSError, Foundation.Localiz
   case dataDecode
   case authenticationFailed
   case general
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
