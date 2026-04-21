@@ -35,8 +35,8 @@
             <preference name="SwiftVersion" value="5" />
         </config-file>
         
-        <source-file src="src/ios/SecureStorage.swift"/>
-        <framework src="src/ios/frameworks/OSKeyStoreLib.xcframework" embed="true" custom="true" />
+        <source-file src="src/ios/SecureStorage.swift" nospm="true"/>
+        <framework src="src/ios/frameworks/OSKeyStoreLib.xcframework" embed="true" custom="true" nospm="true"/>
     </platform>
 
     <platform name="android">
