@@ -1,3 +1,6 @@
+#if canImport(Cordova)
+import Cordova
+#endif
 import OSKeyStoreLib
 
 @objc(SecureStorage)
