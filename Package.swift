@@ -24,6 +24,7 @@ let package = Package(
                 .target(name: "OSKeyStoreLib")
             ],
             path: "src/ios",
+            sources: ["SecureStorage.swift"],
             exclude: [
                 "frameworks/OSKeyStoreLib.xcframework"
             ])
