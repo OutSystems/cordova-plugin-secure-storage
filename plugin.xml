@@ -27,7 +27,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <platform name="ios">
+    <platform name="ios" package="swift">
         <config-file target="config.xml" parent="/*">
             <feature name="SecureStorage">
                 <param name="ios-package" value="SecureStorage"/>

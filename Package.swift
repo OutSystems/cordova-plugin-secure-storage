@@ -3,11 +3,14 @@ import PackageDescription
 
 let package = Package(
     name: "cordova-plugin-secure-storage",
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "cordova-plugin-secure-storage",
-            targets: ["cordova-plugin-secure-storage"]
-        )
+            targets: ["cordova-plugin-secure-storage"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/apache/cordova-ios.git", branch: "master")
     ],
     targets: [
         .binaryTarget(
@@ -16,9 +19,13 @@ let package = Package(
         ),
         .target(
             name: "cordova-plugin-secure-storage",
-            dependencies: ["OSKeyStoreLib"],
+            dependencies: [
+                .product(name: "Cordova", package: "cordova-ios"),
+                .target(name: "OSKeyStoreLib")
+            ],
             path: "src/ios",
-            sources: ["SecureStorage.swift"]
-        )
+            exclude: [
+                "frameworks/OSKeyStoreLib.xcframework"
+            ])
     ]
 )
