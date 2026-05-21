@@ -98,10 +98,10 @@ SecureStorageiOS.prototype = {
         }
     },
 
-    set: function (success, error, key, value, useAuthentication = false) {
+    set: function (success, error, key, value, useAuthentication = false, invalidateOnBiometricChange = false) {
         try {
             _checkIsString(value);
-            _executeNativeMethod(success, error, 'set', [this.service, key, value, useAuthentication]);
+            _executeNativeMethod(success, error, 'set', [this.service, key, value, useAuthentication, invalidateOnBiometricChange]);
         } catch (e) {
             error(e);
         }
@@ -214,11 +214,11 @@ SecureStorageAndroid.prototype = {
         }
     },
 
-    set: function (success, error, key, value, authenticate = false) {
+    set: function (success, error, key, value, authenticate = false, invalidateOnBiometricChange = false) {
         try {
             _checkIsString(value);
             if (this.options.native) {
-                this._native_set(success, error, key, value, authenticate);
+                this._native_set(success, error, key, value, authenticate, invalidateOnBiometricChange);
             } else {
                 this._sjcl_set(success, error, key, value);
             }
@@ -362,14 +362,14 @@ SecureStorageAndroid.prototype = {
         );
     },
 
-    _native_set: function (success, error, key, value, authenticate) {
+    _native_set: function (success, error, key, value, authenticate, invalidateOnBiometricChange) {
         _executeNativeMethod(
             function () {
                 success(key);
             },
             error,
             'set',
-            [this.service, '_SS_' + key, value, authenticate]
+            [this.service, '_SS_' + key, value, authenticate, invalidateOnBiometricChange || false]
         );
     },
 

@@ -14,11 +14,12 @@ repositories {
     mavenCentral()
     repositories {
         maven { url 'https://pkgs.dev.azure.com/OutSystemsRD/9e79bc5b-69b2-4476-9ca5-d67594972a52/_packaging/PublicArtifactRepository/maven/v1' }
+        maven { url 'https://jitpack.io' }
     }
 }
 
 dependencies {
     implementation("androidx.security:security-crypto:1.1.0-alpha03")
     implementation("androidx.biometric:biometric:1.1.0")
-    implementation("com.github.outsystems:oskeystore-android:1.1.1@aar")
+    implementation("com.github.outsystems:oskeystore-android:feat/RMET-5188/invalidate-storage-SNAPSHOT@aar")
 }

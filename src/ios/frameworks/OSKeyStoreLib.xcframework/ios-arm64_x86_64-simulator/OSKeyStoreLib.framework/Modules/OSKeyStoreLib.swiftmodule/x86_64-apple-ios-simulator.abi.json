@@ -320,6 +320,13 @@
       },
       {
         "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "OSKeyStoreLib"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -340,7 +347,7 @@
           {
             "kind": "Function",
             "name": "save",
-            "printedName": "save(service:account:data:useAccessControl:)",
+            "printedName": "save(service:account:data:useAccessControl:invalidateOnBiometricChange:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -370,11 +377,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP4save7service7account4data16useAccessControlySS_SS10Foundation4DataVSbtF",
-            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegateP4save7service7account4data16useAccessControlySS_SS10Foundation4DataVSbtF",
+            "usr": "s:13OSKeyStoreLib19OSKSTActionDelegateP4save7service7account4data16useAccessControl27invalidateOnBiometricChangeySS_SS10Foundation4DataVS2btF",
+            "mangledName": "$s13OSKeyStoreLib19OSKSTActionDelegateP4save7service7account4data16useAccessControl27invalidateOnBiometricChangeySS_SS10Foundation4DataVS2btF",
             "moduleName": "OSKeyStoreLib",
             "genericSig": "<τ_0_0 where τ_0_0 : OSKeyStoreLib.OSKSTActionDelegate>",
             "sugared_genericSig": "<Self where Self : OSKeyStoreLib.OSKSTActionDelegate>",
@@ -1120,24 +1133,24 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "CustomNSError",
+            "printedName": "CustomNSError",
+            "usr": "s:10Foundation13CustomNSErrorP",
+            "mangledName": "$s10Foundation13CustomNSErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -1170,17 +1183,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomNSError",
-            "printedName": "CustomNSError",
-            "usr": "s:10Foundation13CustomNSErrorP",
-            "mangledName": "$s10Foundation13CustomNSErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LocalizedError",
-            "printedName": "LocalizedError",
-            "usr": "s:10Foundation14LocalizedErrorP",
-            "mangledName": "$s10Foundation14LocalizedErrorP"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -1191,10 +1197,24 @@
           },
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -1217,77 +1237,84 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/OSKSTQuery.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2122,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 145,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 181,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 212,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 242,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 267,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 294,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 320,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 358,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 382,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 416,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/alexandre.jacinto\/Documents\/Work\/Repositories\/Libraries\/iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
+      "filePath": "\/Users\/ruimendes\/Documents\/Outsystems\/Native_Libs_iOS\/OSKeyStoreLib-iOS\/OSKeyStoreLib\/Error\/OSKSTError.swift",
       "kind": "IntegerLiteral",
       "offset": 438,
       "length": 2,
