@@ -369,7 +369,7 @@ SecureStorageAndroid.prototype = {
             },
             error,
             'set',
-            [this.service, '_SS_' + key, value, authenticate, invalidateOnBiometricChange || false]
+            [this.service, '_SS_' + key, value, authenticate, invalidateOnBiometricChange]
         );
     },
 
