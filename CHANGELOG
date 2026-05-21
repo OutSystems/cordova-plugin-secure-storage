@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.6.8-OS30 - 2026-05-21
+------------------
+- Feat: [iOS][Android] Add `invalidateOnBiometricChange` parameter to `set` method. When set to `true`, the stored secret is invalidated when the device's biometric configuration changes (https://outsystemsrd.atlassian.net/browse/RMET-5188).
+
 2.6.8-OS29 - 2026-03-06
 ------------------
 - Fix: [iOS] - Update to library framework built with Xcode 16 and not 26 (https://outsystemsrd.atlassian.net/browse/RMET-5030).
