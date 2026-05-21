@@ -385,7 +385,7 @@ public class SecureStorage extends CordovaPlugin {
         final String key = args.getString(1);
         final String value = args.getString(2);
         final Boolean authenticate = args.getBoolean(3);
-        final boolean invalidateOnBiometricChange = args.length() > 4 && args.getBoolean(4);
+        final Boolean invalidateOnBiometricChange = args.getBoolean(4);
 
         keystoreController.checkAndHandleBiometricChange(cordova.getActivity(), store);
         keystoreController.setValues(key, value, store, authenticate, invalidateOnBiometricChange);
