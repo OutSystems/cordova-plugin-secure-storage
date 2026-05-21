@@ -65,6 +65,7 @@
         <source-file src="src/android/ExecutorResult.java" target-dir="src/com/crypho/plugins/" />
         <source-file src="src/android/ExecutorResultType.java" target-dir="src/com/crypho/plugins/" />
 
+        <lib-file src="src/android/libs/OSKeystoreLib-release.aar" />
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
 
     </platform>
