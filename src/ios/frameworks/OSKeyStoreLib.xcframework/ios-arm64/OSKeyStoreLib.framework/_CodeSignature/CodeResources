@@ -6,23 +6,31 @@
 	<dict>
 		<key>Headers/OSKeyStoreLib-Swift.h</key>
 		<data>
-		u9nMB/j3UWnYBO8S2g/ftXEOJE8=
+		wJZQhxgwI5sR/Y7s3hCxQIXYpg0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FnSz1XSN0iXG7odWDqWxG/2WV2c=
+		kAPY4+9Gsya2GtAKIQoXeDvXtsk=
+		</data>
+		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		8LvNGRAej9vCCASc40at5o/giLQ=
+		</data>
+		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		Bu3TokIB+3kqiWNEKJTTrmWwpjo=
 		</data>
 		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		EdJGI96fh6Lv5+MHQpsgTM6mQtY=
+		POCginvJrOEG1TWPutcAUw2Hgxs=
 		</data>
 		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		1ggNChTvcPwwixEOKJa8g2rfjos=
+		Bu3TokIB+3kqiWNEKJTTrmWwpjo=
 		</data>
 		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		UfHmCpYIrbeKEBCCf1F91nDSh1Q=
+		brkCTB/H8sa7etbWK0IJTYDVrgE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,28 +43,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gLQR1KiFFL/WmI3KIrh9TKM6H7vzUWe+x6Uu9ZImu7E=
+			sKf8Usw42azQzNfzmyXpzUj+N5cE+i+wQNKjij7qQww=
+			</data>
+		</dict>
+		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Wz4vzX5GU/RIyZwBFfuTgGTcyWQEqaOdOI/+C3m7TIs=
+			</data>
+		</dict>
+		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			K/le0Lvz4d92j+1lIysNJBCuzZRpRUiRc9QkfKDlIUg=
 			</data>
 		</dict>
 		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cwH6oY0uvgHjLOETs+u6sOA7ze84YuFG2MKjXBOKgzw=
+			eDApYRy8dJq+IAerrKjnHvz5NJNH5fkA/+kv9h6iWIg=
 			</data>
 		</dict>
 		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RsEHJzRLtnH36DDMU1cgbB1yamTMvAJkgpWj4OqH1I4=
+			K/le0Lvz4d92j+1lIysNJBCuzZRpRUiRc9QkfKDlIUg=
 			</data>
 		</dict>
 		<key>Modules/OSKeyStoreLib.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hreu6hUiq9wsaMtzcOahURLh/G616eJF0g/dmUnuGP4=
+			nAEWlQGpHvbh6jd+tntO2D6UxRShpWX0K31D+m4rTto=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
