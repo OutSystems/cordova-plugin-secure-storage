@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-secure-storage"
-    version="2.6.8-OS29">
+    version="2.6.8-OS30">
   
     <name>SecureStorage</name>
     <author>Crypho AS</author>
@@ -28,13 +28,16 @@
     </engines>
 
     <platform name="ios">
+        <preference name="FACEID_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSFaceIDUsageDescription">
+            <string>$FACEID_USAGE_DESCRIPTION</string>
+        </config-file>
         <config-file target="config.xml" parent="/*">
             <feature name="SecureStorage">
                 <param name="ios-package" value="SecureStorage"/>
             </feature>
             <preference name="SwiftVersion" value="5" />
         </config-file>
-        
         <source-file src="src/ios/SecureStorage.swift"/>
         <framework src="src/ios/frameworks/OSKeyStoreLib.xcframework" embed="true" custom="true" />
     </platform>
