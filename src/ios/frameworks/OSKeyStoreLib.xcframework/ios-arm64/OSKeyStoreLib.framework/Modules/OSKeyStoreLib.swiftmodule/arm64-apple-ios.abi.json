@@ -1133,24 +1133,24 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "CustomNSError",
-            "printedName": "CustomNSError",
-            "usr": "s:10Foundation13CustomNSErrorP",
-            "mangledName": "$s10Foundation13CustomNSErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LocalizedError",
-            "printedName": "LocalizedError",
-            "usr": "s:10Foundation14LocalizedErrorP",
-            "mangledName": "$s10Foundation14LocalizedErrorP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -1183,10 +1183,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
+            "name": "CustomNSError",
+            "printedName": "CustomNSError",
+            "usr": "s:10Foundation13CustomNSErrorP",
+            "mangledName": "$s10Foundation13CustomNSErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
           },
           {
             "kind": "Conformance",
@@ -1197,24 +1204,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
