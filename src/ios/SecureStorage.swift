@@ -59,16 +59,16 @@ class SecureStorage: CDVPlugin {
             let service = command.argument(at: 0) as? String,
             let key = command.argument(at: 1) as? String,
             let value = command.argument(at: 2) as? String, let valueData = value.data(using: .utf8),
-            let useAccessControl = command.argument(at: 3) as? Bool
+            let useAccessControl = command.argument(at: 3) as? Bool,
+            let invalidateOnBiometricChange = command.argument(at: 4) as? Bool
         else {
             self.callback(error: .badArguments)
             return
         }
-        
         self.callbackId = command.callbackId
         self.commandDelegate.run { [weak self] in
             guard let self = self else { return }
-            self.plugin?.save(service: service, account: key, data: valueData, useAccessControl: useAccessControl)
+            self.plugin?.save(service: service, account: key, data: valueData, useAccessControl: useAccessControl, invalidateOnBiometricChange: invalidateOnBiometricChange)
         }
     }
     

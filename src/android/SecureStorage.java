@@ -385,8 +385,10 @@ public class SecureStorage extends CordovaPlugin {
         final String key = args.getString(1);
         final String value = args.getString(2);
         final Boolean authenticate = args.getBoolean(3);
+        final Boolean invalidateOnBiometricChange = args.getBoolean(4);
 
-        keystoreController.setValues(key, value, store, authenticate);
+        keystoreController.checkAndHandleBiometricChange(cordova.getActivity(), store);
+        keystoreController.setValues(key, value, store, authenticate, invalidateOnBiometricChange);
         if(authenticate){
             cordova.setActivityResultCallback(this);
             keystoreController.showBiometricPrompt(cordova.getActivity(), KeystoreController.REQUEST_CODE_BIOMETRIC_SET);
@@ -434,6 +436,8 @@ public class SecureStorage extends CordovaPlugin {
 
         final String store = args.getString(0);
         final String key = args.getString(1);
+
+        keystoreController.checkAndHandleBiometricChange(cordova.getActivity(), store);
 
         if(!cordova.getActivity().getSharedPreferences(store + key, Context.MODE_PRIVATE).contains(store + key)){
             sendError(KeystoreError.KEY_NOT_FOUND_ERROR);

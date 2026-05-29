@@ -60,10 +60,13 @@ var ss = new cordova.plugins.SecureStorage(
 ss.set(
     function (key) { console.log('Set ' + key); },
     function (error) { console.log('Error ' + error); },
-    'mykey', 'myvalue');
+    'mykey', 'myvalue', authenticate, invalidateOnBiometricChange);
 ```
 
 where ``key`` and ``value`` are both strings.
+
+- `authenticate` (optional, default `false`): When set to `true`, the stored secret will require the device's local authentication (Face/Touch ID or PIN) when retrieved.
+- `invalidateOnBiometricChange` (optional, default `false`): When set to `true`, the stored secret is automatically invalidated when the device's biometric configuration changes (e.g. a new Face ID or fingerprint is enrolled). Only takes effect when `authenticate` is `true`.
 
 #### Get a key's value from the storage.
 
