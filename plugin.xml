@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-secure-storage"
-    version="2.6.8-OS30">
-  
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-secure-storage" version="2.6.8-OS30">
     <name>SecureStorage</name>
     <author>Crypho AS</author>
-
     <description>
         Secure, encrypted storage for cordova apps in iOS and Android.
     </description>
-
     <license>MIT</license>
-
     <keywords>keychain, encryption, security</keywords>
-
     <js-module src="www/securestorage.js" name="SecureStorage">
-        <clobbers target="SecureStorage" />
+        <clobbers target="SecureStorage"/>
     </js-module>
-
     <js-module src="www/sjcl_ss.js" name="sjcl_ss">
         <runs/>
     </js-module>
-
     <engines>
-        <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version=">=3.0.0"/>
     </engines>
-
     <platform name="ios">
         <preference name="FACEID_USAGE_DESCRIPTION" default=" " />
         <config-file target="*-Info.plist" parent="NSFaceIDUsageDescription">
@@ -36,54 +25,45 @@
             <feature name="SecureStorage">
                 <param name="ios-package" value="SecureStorage"/>
             </feature>
-            <preference name="SwiftVersion" value="5" />
+            <preference name="SwiftVersion" value="5"/>
         </config-file>
         <source-file src="src/ios/SecureStorage.swift"/>
-        <framework src="src/ios/frameworks/OSKeyStoreLib.xcframework" embed="true" custom="true" />
+        <framework src="src/ios/frameworks/OSKeyStoreLib.xcframework" embed="true" custom="true"/>
     </platform>
-
     <platform name="android">
-
-        <hook type="after_prepare" src="hooks/android/androidCopyPreferences.js" />
-
+        <hook type="after_prepare" src="hooks/android/androidCopyPreferences.js"/>
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SecureStorage" >
+            <feature name="SecureStorage">
                 <param name="android-package" value="com.crypho.plugins.SecureStorage"/>
             </feature>
-            <preference name="GradlePluginKotlinEnabled" value="true" />
-            <preference name="GradlePluginKotlinCodeStyle" value="official" />
+            <preference name="GradlePluginKotlinEnabled" value="true"/>
+            <preference name="GradlePluginKotlinCodeStyle" value="official"/>
             <preference name="AndroidXEnabled" value="true"/>
         </config-file>
-
-        <source-file src="src/android/AES.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/IntentRequest.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/IntentRequestQueue.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/IntentRequestType.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/RSA.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/SecureStorage.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/SharedPreferencesHandler.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/TransitionValue.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/EncryptionExecutor.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/DecryptionExecutor.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/ExecutorResult.java" target-dir="src/com/crypho/plugins/" />
-        <source-file src="src/android/ExecutorResultType.java" target-dir="src/com/crypho/plugins/" />
-
-        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-
+        <source-file src="src/android/AES.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/IntentRequest.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/IntentRequestQueue.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/IntentRequestType.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/RSA.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/SecureStorage.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/SharedPreferencesHandler.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/TransitionValue.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/EncryptionExecutor.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/DecryptionExecutor.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/ExecutorResult.java" target-dir="src/com/crypho/plugins/"/>
+        <source-file src="src/android/ExecutorResultType.java" target-dir="src/com/crypho/plugins/"/>
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
     </platform>
-
     <platform name="browser">
         <config-file target="config.xml" parent="/*">
             <feature name="SecureStorage">
-                <param name="browser-package" value="SecureStorage" />
+                <param name="browser-package" value="SecureStorage"/>
             </feature>
         </config-file>
     </platform>
-
     <platform name="windows">
         <js-module src="src/windows/SecureStorage.js" name="SecureStorageWindowsImpl">
-            <runs />
+            <runs/>
         </js-module>
     </platform>
-
 </plugin>

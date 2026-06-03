@@ -41,11 +41,15 @@
   },
   "scripts": {
     "eslint": "./node_modules/.bin/eslint www/securestorage.js tests/tests.js",
-    "capacitor:update:after": "node build-actions/insert_azure_repository.js"
+    "capacitor:update:after": "node build-actions/insert_azure_repository.js",
+    "release": "node scripts/release.js"
   },
   "devDependencies": {
+    "@octokit/rest": "^21.0.2",
     "cordova-plugin-test-framework": ">=1.0.0",
-    "eslint": ""
+    "eslint": "",
+    "simple-git": "^3.25.0",
+    "xml2js": "^0.6.2"
   },
   "license": "MIT",
   "bugs": {
