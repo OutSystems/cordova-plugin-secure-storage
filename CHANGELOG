@@ -1,3 +1,11 @@
+## [2.6.8-OS31]
+
+### 2026-06-19
+
+- ci: Trigger release on push to outsystems (#49)
+- ci: Release and Changelog automation (#44)
+
+
 ## Changelog (old)
 =========
 
