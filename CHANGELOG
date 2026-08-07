@@ -1,3 +1,10 @@
+## [2.6.8-OS32]
+
+### 2026-08-07
+
+- ci: use node 24 and update action versions (#50)
+
+
 ## [2.6.8-OS31]
 
 ### 2026-06-19
