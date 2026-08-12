@@ -36,8 +36,6 @@
             <feature name="SecureStorage">
                 <param name="android-package" value="com.crypho.plugins.SecureStorage"/>
             </feature>
-            <preference name="GradlePluginKotlinEnabled" value="true"/>
-            <preference name="GradlePluginKotlinCodeStyle" value="official"/>
             <preference name="AndroidXEnabled" value="true"/>
         </config-file>
         <source-file src="src/android/AES.java" target-dir="src/com/crypho/plugins/"/>
