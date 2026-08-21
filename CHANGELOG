@@ -1,3 +1,10 @@
+## [2.6.8-OS33]
+
+### 2026-08-21
+
+- chore(android): Remove kotlin declaration from plugin.xml (#51)
+
+
 ## [2.6.8-OS32]
 
 ### 2026-08-07
