@@ -1,0 +1,1 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/biometric_prompt_title,@string/biometric_prompt_subtitle,@string/biometric_prompt_negative_button,@bool/migration_auth,@layout/biometric_activity" />
