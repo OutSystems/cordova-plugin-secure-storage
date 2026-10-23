@@ -1,3 +1,10 @@
+## [2.6.8-OS34]
+
+### 2026-10-23
+
+- fix(android): keep resources read by name when shrinking resources
+
+
 ## [2.6.8-OS33]
 
 ### 2026-08-21
