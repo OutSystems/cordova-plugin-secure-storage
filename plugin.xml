@@ -51,6 +51,7 @@
         <source-file src="src/android/ExecutorResult.java" target-dir="src/com/crypho/plugins/"/>
         <source-file src="src/android/ExecutorResultType.java" target-dir="src/com/crypho/plugins/"/>
         <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+        <resource-file src="src/android/res/raw/secure_storage_keep.xml" target="res/raw/secure_storage_keep.xml"/>
     </platform>
     <platform name="browser">
         <config-file target="config.xml" parent="/*">
